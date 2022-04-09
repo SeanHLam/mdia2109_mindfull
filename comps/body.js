@@ -3,13 +3,15 @@ import styled from "styled-components";
 
 
 const TextItem = styled.div`
-font-size: 48pt;
+font-size: 24pt;
 text-align: center;
 color: #6F5F5E;
-font-family: 'Patrick Hand';
+font-family: 'Dm Sans';
 `
 
-export function HeadText({text="text sample"}){
+export function ParaText(
+    {text="text sample"})
+{
 return <TextItem>{text}</TextItem>
 }
 
