@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { HeadText } from "../comps/header";
 import {ParaText} from "../comps/body"
+import {NavBar} from "../comps/navbar"
 
 <Head>
 <title>Create Next App</title>
@@ -12,10 +13,10 @@ import {ParaText} from "../comps/body"
 
 export default function Test(){
     return <div>
-        
+        <NavBar></NavBar>
         <HeadText text="Welcome to Mindfull"></HeadText>
-
         <ParaText></ParaText>
+
         
         
         
