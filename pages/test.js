@@ -2,9 +2,11 @@ import Head from 'next/head'
 
 import { HeadText } from "../comps/header";
 import {ParaText} from "../comps/body"
+
 import {ResourceMenu, ResourceBox} from "../comps/resourcemenu";
 import {numberArr, linkArr} from "../data/resourcedata";
 import {useState} from 'react';
+import {NavBar} from "../comps/navbar"
 
 <Head>
 <title>Create Next App</title>
@@ -17,9 +19,21 @@ export default function Test(){
 
 
     return <div>
-        <HeadText text="Welcome to Mindfull"></HeadText>
 
-        <ParaText></ParaText>
+
+          <NavBar></NavBar>
+
+          <HeadText text="Welcome to Mindfull"></HeadText>
+          <ParaText></ParaText>
+
+        
+        
+        
+         </div>
+
+    
+
+
 
         <ResourceMenu></ResourceMenu>
         </div>
