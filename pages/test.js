@@ -26,16 +26,12 @@ export default function Test(){
           <HeadText text="Welcome to Mindfull"></HeadText>
           <ParaText></ParaText>
 
-        
-        
-        
-         </div>
 
     
 
 
 
-        <ResourceMenu></ResourceMenu>
+            <ResourceMenu></ResourceMenu>
         </div>
 }
 

@@ -8,12 +8,12 @@ const NavCont = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: 6em;
+
 background-color: #6F5F5E;
 `
 
 const LogoImage = styled.img`
-object-fit: contain;
+
 `
 
 
