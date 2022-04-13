@@ -9,8 +9,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-
 background-color: #6F5F5E;
+
+
 `
 
 const NavTop = styled.div`
@@ -42,6 +43,8 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+z-index: 3;
+position: relative;
 `
 
 const NavUl = styled.ul`
@@ -66,8 +69,9 @@ font-size: 32pt;
 list-style-type: none;
 transition: background-color 1s;
 &:hover{
-    background-color: #DAE5E7;
-    color: black;
+    background-color: #8D7A79;
+    background-color: #8D7A79;
+
 }
 
 
