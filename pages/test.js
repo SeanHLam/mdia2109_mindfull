@@ -6,7 +6,9 @@ import {ParaText} from "../comps/body"
 import {ResourceMenu, ResourceBox} from "../comps/resourcemenu";
 import {numberArr, linkArr} from "../data/resourcedata";
 import {useState} from 'react';
-import {NavBar} from "../comps/navbar"
+import {NavBar} from "../comps/navbar";
+import {LargeButton} from "../comps/largebutton";
+import {SmallButton} from "../comps/smallbutton";
 
 <Head>
 <title>Create Next App</title>
@@ -32,6 +34,8 @@ export default function Test(){
 
 
             <ResourceMenu></ResourceMenu>
+            <LargeButton></LargeButton>
+            <SmallButton></SmallButton>
         </div>
 }
 
