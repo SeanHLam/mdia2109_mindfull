@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faHouse, faLightbulb, faPhone, faFlag, faCircleInfo, faUserGroup, faX } from '@fortawesome/free-solid-svg-icons'
+import { NavName, NavIcon, NavPath } from "../data/navdata";
+import Router, { useRouter } from "next/router";
+import { useReducer, useState } from "react";
 
 
 
@@ -10,8 +13,6 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 background-color: #6F5F5E;
-
-
 `
 
 const NavTop = styled.div`
@@ -20,19 +21,21 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: .5em;
+
 `
 
 const LogoImage = styled.img`
  height:5em;
  margin-right: .5em;
- 
+ user-select: none;
 `   
 const LogoType = styled.img`
  height:3em;
+ user-select: none;
 `
 
 const MenuCont = styled.div`
- position: fixed;
+ position: absolute;
  left: 0;
  margin-left: 1em;
 `
@@ -45,6 +48,9 @@ justify-content: center;
 align-items: center;
 z-index: 3;
 position: relative;
+height: 100%;
+transition: height 1s 1s linear, display 1s;
+
 `
 
 const NavUl = styled.ul`
@@ -63,6 +69,7 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 width: 100%;
+max-height: 100%;
 font-family: Oswald;
 color: white;
 font-size: 32pt;
@@ -74,6 +81,8 @@ transition: background-color 1s;
 
 }
 
+    
+
 
 `
 
@@ -82,34 +91,73 @@ const IconCont = styled.div`
 `
 
 
+export function NavBar(){
+const r = useRouter()
+const [toggle, setToggle] = useState(false)
 
-export function NavBar()
-{
+
+function toggleState(){
+    if (toggle === false) {
+        setToggle(true)
+    }else if(toggle === true){
+        setToggle(false)
+    } 
+}
+
 return <NavCont>
+    <NavTop>   
     
-    <NavTop
-    >   <MenuCont>
-            <FontAwesomeIcon icon={faBars} size="3x" color="white"></FontAwesomeIcon>
-        </MenuCont> 
-        <LogoImage src="browny1.svg"></LogoImage>
-        <LogoType src="LogoType.svg"></LogoType>
+    <MenuCont>
+           
+           {
+            toggle === true &&
+            <FontAwesomeIcon icon={faX} size="3x" color="white" 
+                onClick={()=>toggleState()}>
+            </FontAwesomeIcon>
+            }
+
+            {
+            toggle === false &&
+            <FontAwesomeIcon icon={faBars} size="3x" color="white" 
+                onClick={()=>toggleState()} >
+            </FontAwesomeIcon>
+            }
+   
+   
+    </MenuCont> 
+        
+        <LogoImage src="browny1.svg" 
+            onClick={()=>r.push({
+                pathname: "/"
+            })}
+        ></LogoImage>
+        
+        <LogoType src="LogoType.svg"
+            onClick={()=>r.push({
+            pathname: "/"
+            })}
+        ></LogoType>
     </NavTop>
 
-    <NavBot>
+    <NavBot style= {toggle ? {height: "100%"} : {height: "0",}}>
         <NavUl>
-
-            <NavLi>
+            
+            {NavName.map((o,i)=><NavLi
+                 onClick={()=>r.push({
+                 pathname: NavPath[i]
+                 })}
+                 style= {toggle ? {opacity: "100", height: "100%"} : { opacity: "0", height: "0"}}
+                >
                 <IconCont>
-                    <FontAwesomeIcon icon={faHouse}  color="white"></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={NavIcon[i]} color="white"></FontAwesomeIcon>
                 </IconCont>
-                Home
-            </NavLi>
-            <NavLi>
-                <IconCont>
-                    <FontAwesomeIcon icon={faHouse}  color="white"></FontAwesomeIcon>
-                </IconCont>
-                Home
-            </NavLi>
+                {NavName[i]
+                
+                
+                }</NavLi>)}
+            
+            
+            
 
 
         </NavUl>

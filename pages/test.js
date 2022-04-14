@@ -23,6 +23,7 @@ export default function Test(){
 
           <NavBar></NavBar>
 
+
           <HeadText text="Welcome to Mindfull"></HeadText>
           <ParaText></ParaText>
 
