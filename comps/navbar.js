@@ -41,15 +41,20 @@ const MenuCont = styled.div`
 `
 
 const NavBot = styled.div`
+position:absolute;
+top:95px;
 display: flex;
+background-color: #6F5F5E;
 width: 100%;    
 display: flex;
 justify-content: center;
 align-items: center;
 z-index: 3;
-position: relative;
-height: 100%;
-transition: height 1s 1s linear, display 1s;
+// position: relative;
+// height: 100%;
+max-height:0px;
+overflow:hidden;
+transition: max-height 1.5s, display 1s;
 
 `
 
@@ -81,7 +86,7 @@ transition: background-color 1s;
 
 }
 
-    
+
 
 
 `
@@ -139,14 +144,14 @@ return <NavCont>
         ></LogoType>
     </NavTop>
 
-    <NavBot style= {toggle ? {height: "100%"} : {height: "0",}}>
+    <NavBot style= {toggle ? {maxHeight: "400px"} : {height: "0%",}}>
         <NavUl>
             
             {NavName.map((o,i)=><NavLi
                  onClick={()=>r.push({
                  pathname: NavPath[i]
                  })}
-                 style= {toggle ? {opacity: "100", height: "100%"} : { opacity: "0", height: "0"}}
+                //  style= {toggle ? {opacity: "100", height: "100%"} : { opacity: "0", height: "0"}}
                 >
                 <IconCont>
                     <FontAwesomeIcon icon={NavIcon[i]} color="white"></FontAwesomeIcon>
