@@ -8,7 +8,7 @@ import {numberArr, linkArr} from "../../data/resourcedata";
 import {useState} from 'react';
 import {NavBar} from "../../comps/navbar";
 import {LargeButton} from "../../comps/largebutton";
-import {SmallButton} from "../  ../comps/smallbutton";
+import {SmallButton} from "../../comps/smallbutton";
 
 export default function Resource() {
   return (

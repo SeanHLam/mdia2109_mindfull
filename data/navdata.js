@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faHouse, faLightbulb, faPhone, faFlag, faCircleInfo, faUserGroup, faX } from '@fortawesome/free-solid-svg-icons'
 
 export const NavIcon = [
+    faHouse,
     faLightbulb,
     faPhone,
     faFlag,
@@ -10,6 +11,7 @@ export const NavIcon = [
 ]
 
 export const NavName = [
+    "Home",
     "Quiz",
     "Resources",
     'Activities',
@@ -18,6 +20,7 @@ export const NavName = [
 ]
 
 export const NavPath = [
+    "/home",
     "/quiz",
     "/resource",
     '/activities',
