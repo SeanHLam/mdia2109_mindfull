@@ -17,3 +17,9 @@ export const colorArr = [
     "Yellow",
     "Red",
 ]
+
+export const untidyImgs = [
+  "/shirt.png",
+  "/book.png",
+  "/apple.png"
+];

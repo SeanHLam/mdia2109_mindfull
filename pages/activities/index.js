@@ -9,6 +9,7 @@ import {useState} from 'react';
 import {NavBar} from "../../comps/navbar";
 import {LargeButton} from "../../comps/largebutton";
 import {SmallButton} from "../../comps/smallbutton";
+import { untidyImgs } from '../../data/sampledata';
 
 export default function Activities() {
   return (
