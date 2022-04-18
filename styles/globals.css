@@ -24,6 +24,7 @@ a {
   display: none;
 }
 
+/* 
 li:nth-child(even) {
   color: #3366BB;   
   text-decoration: underline;
@@ -31,4 +32,4 @@ li:nth-child(even) {
   font-size:12pt;
   margin-bottom:10pt;
 
-}
+} */

@@ -5,12 +5,23 @@ import { faPhone, faLink, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Resource from "../pages/resource";
 
+
+
+
 const ItemList = styled.li`
 font-size: 14pt;
 font-family: 'Oswald', sans-serif;
 color:#6F5F5E;
 list-style: none;
 text-align:left;
+&:nth-child(even){
+    color: #3366BB;   
+    text-decoration: underline;
+    font-style:italic;
+    font-size:12pt;
+    margin-bottom:10pt;
+}
+
 `
 const ResourceOutline = styled.div`
 width: 230pt;
@@ -34,6 +45,8 @@ display:flex;
 justify-content:center;
 `
 
+
+
 export function Item({
     text = "Item"
 }){
@@ -56,7 +69,7 @@ export function List({
 
 export function ResourceMenu(){
     const [fav, setFav] = useState("number");
-    const [background, setBackground] = useState("#8E6057");
+    const [background, setBackground] = useState("#D28A7C");
 
     const ToggleButton = styled.button`
     color:white;
@@ -86,19 +99,23 @@ export function ResourceMenu(){
     };
 
 
+
     return <div>
     <ResourceBox>
             <ResourceOutline>
 
                 <ToggleButton 
                 onClick={ () => { setFav("number"); setBackground("#8E6057");}}>
-
-                    <FontAwesomeIcon icon={faPhone} size="1x" color="#D28A7C" marginRight="5px"> </FontAwesomeIcon>  NUMBERS </ToggleButton>
-                
+                    <FontAwesomeIcon icon={faPhone} size="1x" color="#D28A7C"> </FontAwesomeIcon> 
+                    NUMBERS 
+                </ToggleButton>
+                  
                 <ToggleButton
                 style= {rightbutton}
                 onClick={ () => {setFav("link");} }>
-                    <FontAwesomeIcon icon={faLink} size="1x" color="#8E6057" marginRight="5px"> </FontAwesomeIcon>  LINKS </ToggleButton>
+                    <FontAwesomeIcon icon={faLink} size="1x" color="#8E6057"> </FontAwesomeIcon> 
+                     LINKS 
+                </ToggleButton>
                 <ListBox>
                     <List arr= {listArr}/>
                 </ListBox>
