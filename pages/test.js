@@ -9,6 +9,7 @@ import {useState} from 'react';
 import {NavBar} from "../comps/navbar";
 import {LargeButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
+import {Arrow} from "../comps/arrow";
 
 <Head>
 <title>Create Next App</title>
@@ -37,6 +38,7 @@ export default function Test(){
             <ResourceMenu></ResourceMenu>
             <LargeButton></LargeButton>
             <SmallButton></SmallButton>
+            <Arrow></Arrow>
         </div>
 }
 
