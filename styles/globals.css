@@ -23,3 +23,12 @@ a {
 ::-webkit-scrollbar {
   display: none;
 }
+
+li:nth-child(even) {
+  color: #3366BB;   
+  text-decoration: underline;
+  font-style:italic;
+  font-size:12pt;
+  margin-bottom:10pt;
+
+}
