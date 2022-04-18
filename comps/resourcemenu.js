@@ -106,7 +106,7 @@ export function ResourceMenu(){
 
                 <ToggleButton 
                 onClick={ () => { setFav("number"); ;} } style= {fav === "number" ? {backgroundColor: "#8E6057"} : {backgroundColor: "#D28A7C"}}>
-                    <FontAwesomeIcon icon={faPhone} size="1x" color= {fav === "number" ? "#D28A7C" :  "#8E6057"}> </FontAwesomeIcon> 
+                    <FontAwesomeIcon icon={faPhone} size="1x" color= {fav === "number" ? "#D28A7C" :  "#8E6057"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                     NUMBERS 
                 </ToggleButton>
             
@@ -114,7 +114,7 @@ export function ResourceMenu(){
                 <ToggleButton
                 style= {rightbutton}
                 onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#8E6057",   borderRadius:"0px 25px 0px 0px",} : {backgroundColor: "#D28A7C",   borderRadius:"0px 25px 0px 0px",}}>
-                    <FontAwesomeIcon icon={faLink} size="1x" color= {fav === "link" ? "#D28A7C" :  "#8E6057"}> </FontAwesomeIcon> 
+                    <FontAwesomeIcon icon={faLink} size="1x" color= {fav === "link" ? "#D28A7C" :  "#8E6057"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                      LINKS 
                 </ToggleButton>
                 <ListBox>

@@ -1,31 +1,34 @@
 export const numberArr = [
     "BC Mental Health Support:",
-    "310-6789",
+    <a href="tel:310-6789">310-6789</a>,
     "Crisis Services Canada:",
-    "1 (833)-456-4566",
+    <a href="tel:1 (833)-456-4566">1 (833)-456-4566</a>,
     "Fraser Health Crisis Line:",
-    "1 (877)-820-7444",
+    <a href="tel:1 (877)-820-7444">1 (877)-820-7444</a>,
     "Here2Talk:",
-    "1 (877)-857-3397",
+    <a href="tel:1 (877)-857-3397">1 (877)-857-3397</a>,
     "Emergencies:",
-    "911",
+    <a href="tel:911">911</a>,
     "Healthlink:",
-    "811"
+    <a href="tel:811">811</a>,
+    "Kids Help Phone",
+    <a href="tel:1 (800)-668-6868">1 (800)-668-6868</a>
 ];
 
 
 export const linkArr = [
     "Chat Service for Youth:",
-    "www.YouthInBC.com",
+    <a href="https://www.youthinbc.com">www.YouthInBC.com</a>,
     "Chat Service for Adults:",
-    "www.CrisisCentreChat.com",
+    <a href="https://www.crisiscentrechat.com">www.CrisisCentreChat.com</a>,
     "Canada Mental Health:",
-    "https://cmha.ca/",
+    <a href="https://www.cmha.ca">www.CMHA.ca</a>,
     "BetterHelp Private Therapy:",
-    "www.BetterHelp.com/helpme",
+    <a href="https://www.betterhelp.com/helpme">www.BetterHelp.com/helpme</a>,
     "Here2Talk for Students:",
-    "www.Here2Talk.ca",
+    <a href="https://www.here2talk.ca">www.Here2Talk.ca</a>,
     "TogetherAll:",
-    "Government of Canada:",
-    "www.canada.ca/public-health/topics/mental-health-wellness"
+    <a href="https://www.togetherall.com">www.TogetherAll.com</a>,
+    "The LifeLine Canada:",
+    <a href="https://www.thelifelinecanada.ca">www.TheLifeLineCanada.ca</a>,
 ]
