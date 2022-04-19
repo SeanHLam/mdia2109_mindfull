@@ -11,6 +11,6 @@ padding: 20pt;
 `
 
 export function HeadText({text="text sample"}){
-return <TextItem>{text}</TextItem>
+return <TextItem src={text}>{text}</TextItem>
 }
 

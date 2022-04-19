@@ -131,13 +131,13 @@ return <NavCont>
    
     </MenuCont> 
         
-        <LogoImage src="browny1.svg" 
+        <LogoImage src="/browny1.svg" 
             onClick={()=>r.push({
                 pathname: "/"
             })}
         ></LogoImage>
         
-        <LogoType src="LogoType.svg"
+        <LogoType src="/LogoType.svg"
             onClick={()=>r.push({
             pathname: "/"
             })}

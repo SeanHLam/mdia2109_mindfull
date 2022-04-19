@@ -4,6 +4,7 @@ import {useState} from 'react';
 import { faPhone, faLink, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Resource from "../pages/resource";
+import { questions, option1, option2 } from "../data/questiondata";
 
 
 

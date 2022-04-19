@@ -7,7 +7,7 @@ import {ResourceMenu, ResourceBox} from "../comps/resourcemenu";
 import {numberArr, linkArr} from "../data/resourcedata";
 import {useState} from 'react';
 import {NavBar} from "../comps/navbar";
-import {LargeButton} from "../comps/largebutton";
+import {LargeButton, QueButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
 import {Arrow} from "../comps/arrow";
 
@@ -37,8 +37,10 @@ export default function Test(){
 
             <ResourceMenu></ResourceMenu>
             <LargeButton></LargeButton>
-            <SmallButton></SmallButton>
+            <SmallButton onClick></SmallButton>
+            <QueButton></QueButton>
             <Arrow></Arrow>
+
         </div>
 }
 
