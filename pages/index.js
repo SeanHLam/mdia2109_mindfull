@@ -1,17 +1,25 @@
 import Head from 'next/head'
-
-
+import styled from 'styled-components';
 import { HeadText } from "../comps/header";
 import {ParaText} from "../comps/body"
-
 import {ResourceMenu, ResourceBox} from "../comps/resourcemenu";
 import {numberArr, linkArr} from "../data/resourcedata";
 import {useState} from 'react';
 import {NavBar} from "../comps/navbar";
 import {LargeButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
+import Router, { useRouter } from "next/router";
+
+const Cont = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+`
+
 
 export default function Home() {
+  const r = useRouter()
   return (
     <div>
       <Head>
@@ -20,13 +28,21 @@ export default function Home() {
         <link rel="icon" href="/brownyfavicon.svg" />
       </Head>
 
-      <main>
-        <HeadText text="Welcome to MindFull" ></HeadText>
+      <Cont>
+        <HeadText text="Welcome to MindFull" className={"head"}></HeadText>
         <ParaText text="Mindfull is an app that helps you measure your mental health. "></ParaText>
-        <LargeButton button_text="LET'S GET STARTED"></LargeButton>
-      </main>
+        <LargeButton button_text="LET'S GET STARTED"
+          onClick={()=> r.push({
+            pathname: "home"
+          })}
+        ></LargeButton>
+      </Cont>
     
       
     </div>
   )
 }
+
+
+
+
