@@ -18,6 +18,9 @@ font-family: 'Oswald';
 `
 
 
-export function SmallButton({button_text="Next"}){
-    return <Button>{button_text}</Button>
+export function SmallButton({
+    button_text="Next",
+    onClick=()=>{}
+}){
+    return <Button onClick={onClick}>{button_text}</Button>
     }

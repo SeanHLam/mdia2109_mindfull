@@ -11,7 +11,7 @@ import {LargeButton} from "../../comps/largebutton";
 import {SmallButton} from "../../comps/smallbutton";
 
 export default function About() {
-  const r = useRouter()
+  
   return (
     <div>
       <Head>
