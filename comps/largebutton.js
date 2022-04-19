@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Router, { useRouter } from "next/router";
 
 const Button = styled.div`
 
@@ -20,6 +21,18 @@ font-family: 'Oswald';
 `
 
 
-export function LargeButton({button_text="Happy Large Button"}){
-    return <Button>{button_text}</Button>
+export function LargeButton({button_text="Happy Large Button", next="/home"}){
+    const r = useRouter()
+    return <Button
+    onClick={()=> r.push({
+    pathname: next
+    })}
+    >{button_text}</Button>
     }
+    
+
+// export function LargeButton({button_text="Happy Large Button"}){
+//     return <Button>{button_text}</Button>
+//     }
+
+

@@ -31,10 +31,8 @@ export default function Home() {
       <Cont>
         <HeadText text="Welcome to MindFull" className={"head"}></HeadText>
         <ParaText text="Mindfull is an app that helps you measure your mental health. "></ParaText>
-        <LargeButton button_text="LET'S GET STARTED"
-          onClick={()=> r.push({
-            pathname: "home"
-          })}
+        <LargeButton button_text="LET'S GET STARTED" next="/home"
+   
         ></LargeButton>
       </Cont>
     

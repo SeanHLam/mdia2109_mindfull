@@ -148,7 +148,7 @@ return <NavCont>
         <NavUl>
             
             {NavName.map((o,i)=><NavLi
-                 onClick={()=>r.push({
+                 onClick={()=> r.push({
                  pathname: NavPath[i]
                  })}
                 //  style= {toggle ? {opacity: "100", height: "100%"} : { opacity: "0", height: "0"}}
