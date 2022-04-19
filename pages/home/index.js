@@ -29,7 +29,7 @@ export default function Home() {
       
       <Cont>
       <HeadText text="How are you today?"></HeadText>
-      <LargeButton button_text="MEASURE YOUR MINDFULLNESS"></LargeButton>
+      <LargeButton button_text="MEASURE YOUR MINDFULLNESS" next="quiz"></LargeButton>
       </Cont>
     
       
