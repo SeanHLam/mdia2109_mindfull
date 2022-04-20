@@ -33,7 +33,7 @@ export default function Quiz() {
       </main>
 
       <Cont>
-      <ImgDiv path='/brownyexplain.svg' size='50%'></ImgDiv>
+      <ImgDiv path='/brownyexplain.svg' size='25em'></ImgDiv>
       </Cont>
     
       
