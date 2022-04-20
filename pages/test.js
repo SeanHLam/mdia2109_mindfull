@@ -10,7 +10,11 @@ import {NavBar} from "../comps/navbar";
 import {LargeButton, QueButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
 import {Arrow} from "../comps/arrow";
+
 import {ques} from "../data/questiondata"
+
+import {SpeechBubble} from "../comps/speechbubble";
+
 
 <Head>
 <title>Create Next App</title>
@@ -67,6 +71,7 @@ export default function Test(){
 
       
             <Arrow></Arrow>
+            <SpeechBubble></SpeechBubble>
 
         
 

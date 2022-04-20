@@ -14,7 +14,6 @@ line-height: 40pt;
 font-family: 'Oswald';
 &:hover{
     background-color: #8E6057;
-    background-color: #8E6057;
 `
 
 

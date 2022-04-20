@@ -33,8 +33,6 @@ vertical-align: middle;
 background-color: #8EAAAC;
 line-height: 40pt; 
 font-family: 'Oswald';
-&:hover{
-    background-color: #6D8C8E;
 `
 const QueCont = styled.div`
 

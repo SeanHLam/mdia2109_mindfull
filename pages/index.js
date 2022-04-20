@@ -9,6 +9,7 @@ import {NavBar} from "../comps/navbar";
 import {LargeButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
 import Router, { useRouter } from "next/router";
+import { ImgDiv } from '../comps/images';
 
 const Cont = styled.div`
 display: flex;
@@ -29,6 +30,7 @@ export default function Home() {
       </Head>
 
       <Cont>
+        <ImgDiv></ImgDiv>
         <HeadText text="Welcome to MindFull" className={"head"}></HeadText>
         <ParaText text="Mindfull is an app that helps you measure your mental health. "></ParaText>
         <LargeButton button_text="LET'S GET STARTED" next="/home"
