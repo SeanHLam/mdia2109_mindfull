@@ -53,22 +53,23 @@ export function LargeButton({button_text="Happy Large Button", next="/home"}){
 
 
 
-export function QueButton({button_text="Happy Large Button"}){
+export function QueButton({button_text="Happy Large Button", onClick=()=>{}}){
     const [options, setOptions] = useState()
-    return <QueCont>
-        
-        
-        
     
-        <Question
-        onClick={()=> setOptions("option1")} style= {options === "option1" ? {backgroundColor: "#6D8C8E"} : {backgroundColor: "#8EAAAC"}}
-        >{button_text}
+    return <QueCont onClick={onClick}>
+        
+        
+        <Question >
+            {button_text}
         </Question>       
         
-         <Question
-        onClick={()=> setOptions("option2")} style= {options === "option2" ? {backgroundColor: "#6D8C8E"} : {backgroundColor: "#8EAAAC"}}
-        >{button_text}
-        </Question>
+
     
     </QueCont>
     }   
+
+
+    // <Question
+    // onClick={()=> setOptions("option1")} style= {options === "option1" ? {backgroundColor: "#6D8C8E"} : {backgroundColor: "#8EAAAC"}}
+    // >{button_text}
+    // </Question>   

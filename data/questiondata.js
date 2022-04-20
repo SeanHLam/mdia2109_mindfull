@@ -22,13 +22,103 @@ export const option2 = [
     'I sleep less than 6 hours',
 ]
 
-export const que = [
+export const ques = [
 
     {
     q: "How old are you?",
+    c: [
+        {
+        txt: "I’m 15 - 18 years old",
+        num: 0,
+        },
+
+        {
+        txt: "I’m older than 18",
+        num: 0,
+        }
+    ],
+    a: 0,
+    selected: ""
+    },
+    
+    {
+        q: "How often do you exercise?",
+        c: [
+            {
+            txt: "Often and regularly",
+            num: 1,
+            },
+    
+            {
+            txt: "Very little or never",
+            num: -1,
+            }
+        ],
+        a: 0,
+        selected: ""
+        },
+
+        {
+            q: "How much are you eating in a day?",
+            c: [
+                {
+                txt: "I feel I eat too much",
+                num: -1,
+                },
+        
+                {
+                txt: "I’m eating enough",
+                num: 1,
+                },
+
+                {
+                txt: "I feel I don’t eat enough",
+                num: -1,
+                }
+            ],
+            a: 0,
+            selected: ""
+            },
+
+        {
+        q: 'How much are you sleeping in a day?',
+        c: [
+            {
+            txt: "I feel I eat too much",
+            num: 1,
+            },
+    
+            {
+            txt: "I’m eating enough",
+            num: -1,
+            }
+        ],
+        a: 0,
+        selected: ""
+        },
+
+        {
+            q: "How are you feeling today?",
+            c: [
+                {
+                txt: "Often and regularly",
+                num: 1,
+                },
+        
+                {
+                txt: "Very little or never",
+                num: -1,
+                }
+            ],
+            a: 0,
+            selected: ""
+            },
+
+         
+
     
 
-    }
+
 
 
 
