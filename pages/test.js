@@ -10,6 +10,7 @@ import {NavBar} from "../comps/navbar";
 import {LargeButton, QueButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
 import {Arrow} from "../comps/arrow";
+import {ques} from "../data/questiondata"
 
 <Head>
 <title>Create Next App</title>
@@ -19,6 +20,21 @@ import {Arrow} from "../comps/arrow";
 
 
 export default function Test(){
+
+    var page = 0
+
+    function StoreAn(qnum,mnum,txt){
+      ques[qnum].a = mnum
+      ques[2].selected = txt
+      console.log(mnum,ques[qnum].a)
+      
+    }
+
+    const [options, setOptions] = useState()
+    
+    function toggle(){
+      setOptions(true)
+    }
 
 
     return <div>
@@ -37,12 +53,28 @@ export default function Test(){
 
             <ResourceMenu></ResourceMenu>
             <LargeButton></LargeButton>
-            <SmallButton onClick></SmallButton>
-            <QueButton></QueButton>
+            <SmallButton onClick = {()=>{console.log(ques[2].c[0].txt)}}> </SmallButton>
+            
+            {ques[2].c.map((o,i)=><QueButton button_text={ques[2].c[i].txt}
+            
+            onClick = {()=> {StoreAn(i ,ques[2].c[i].num, ques[2].c[i].txt ), console.log(ques[1], ques[2].a)} }
+           
+           ></QueButton>)}
+
+           
+
+    
+
+      
             <Arrow></Arrow>
+
+        
 
         </div>
 }
+
+
+
 
 
 
