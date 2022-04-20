@@ -10,6 +10,7 @@ import {NavBar} from "../comps/navbar";
 import {LargeButton, QueButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
 import {Arrow} from "../comps/arrow";
+import {SpeechBubble} from "../comps/speechbubble";
 
 <Head>
 <title>Create Next App</title>
@@ -40,6 +41,7 @@ export default function Test(){
             <SmallButton onClick></SmallButton>
             <QueButton></QueButton>
             <Arrow></Arrow>
+            <SpeechBubble></SpeechBubble>
 
         </div>
 }
