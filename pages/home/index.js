@@ -9,6 +9,7 @@ import {useState} from 'react';
 import {NavBar} from "../../comps/navbar";
 import {LargeButton} from "../../comps/largebutton";
 import {SmallButton} from "../../comps/smallbutton";
+import { ImgDiv } from '../../comps/images';
 
 const Cont = styled.div`
 display: flex;
@@ -28,8 +29,11 @@ export default function Home() {
       <NavBar></NavBar>
       
       <Cont>
+      <ImgDiv path='/leaves.gif' size='70%' placement='absolute' opacity='40%'></ImgDiv>
+      <ImgDiv path='/browny1.svg' size='35%'></ImgDiv>
       <HeadText text="How are you today?"></HeadText>
       <LargeButton button_text="MEASURE YOUR MINDFULLNESS" next="quiz"></LargeButton>
+      <ImgDiv path='/clouds.svg' size='50%'></ImgDiv>
       </Cont>
     
       
