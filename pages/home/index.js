@@ -29,11 +29,11 @@ export default function Home() {
       <NavBar></NavBar>
       
       <Cont>
-      <ImgDiv path='/leaves.gif' size='60em' placement='absolute' opacity='40%'></ImgDiv>
       <ImgDiv path='/browny1.svg' size='20em'></ImgDiv>
       <HeadText text="How are you today?"></HeadText>
       <LargeButton button_text="MEASURE YOUR MINDFULLNESS" next="quiz"></LargeButton>
       <ImgDiv path='/clouds.svg' size='40em'></ImgDiv>
+      <ImgDiv path='/leaves.gif' placement='absolute' size='60em' opacity='40%'></ImgDiv>
       </Cont>
     
       

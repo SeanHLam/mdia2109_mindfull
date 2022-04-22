@@ -12,6 +12,7 @@ import {LargeButton} from "../../comps/largebutton";
 import {SmallButton} from "../../comps/smallbutton";
 import { untidyImgs } from '../../data/sampledata';
 import { ImgDiv } from '../../comps/images';
+import { Message } from '../../comps/messagebrowny';
 
 const Cont = styled.div`
 display: flex;
@@ -39,6 +40,7 @@ export default function Activities() {
       <ImgDiv path='/apple.png' size='6em' placement='absolute' zIndex='1' marginLeft='1em' top='25em'></ImgDiv>
       <ImgDiv path='/book.png' size='9em' placement='absolute' zIndex='1' marginLeft='7em' top='28em'></ImgDiv>
       <ImgDiv path='/activityRoom.png' size='32em'></ImgDiv>
+      <Message></Message>
       </Cont>
     
       
