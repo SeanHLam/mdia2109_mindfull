@@ -15,6 +15,7 @@ export const ques = [
         num: 0,
         }
     ],
+    i: "/brownyexplain.svg" , 
     a: 0,
     selected: ""
     },
@@ -32,6 +33,7 @@ export const ques = [
             num: -1,
             }
         ],
+        i: "/brownyrun.svg",
         a: 0,
         selected: ""
         },
@@ -54,6 +56,7 @@ export const ques = [
                 num: -1,
                 }
             ],
+            i: "/brownyEating.svg",
             a: 0,
             selected: ""
             },
@@ -71,6 +74,7 @@ export const ques = [
             num: -1,
             }
         ],
+        i: "/brownysleep.svg",
         a: 0,
         selected: ""
         },
@@ -109,6 +113,7 @@ export const ques = [
                 ig: "/superSad.svg"
                 },
             ],
+            i: "/brownyexplain.svg" , 
             a: 0,
             selected: ""
             },

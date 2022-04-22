@@ -12,6 +12,6 @@ position: relative;
 display: block;
 `
 
-export function ImgDiv({path="/browny2.svg", size="20%", placement="relative", opacity="100%"}){
-return <ImageItem src={path} style={{width: size, position: placement, opacity: opacity}}/> 
+export function ImgDiv({path="/browny2.svg", size="20%", placement="relative", opacity="100%", onClick=()=>{}}){
+return <ImageItem src={path} style={{width: size, position: placement, opacity: opacity}} onClick={onClick}/> 
 }

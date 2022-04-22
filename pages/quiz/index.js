@@ -31,7 +31,7 @@ export default function Quiz() {
       <main>
       <NavBar></NavBar>
       </main>
-
+      
       <Cont>
       <ImgDiv path='/brownyexplain.svg' size='50%'></ImgDiv>
       </Cont>
