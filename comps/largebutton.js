@@ -72,8 +72,4 @@ export function QueButton({button_text="Happy Large Button", onClick=()=>{}}){
     </QueCont>
     }   
 
-
-    // <Question
-    // onClick={()=> setOptions("option1")} style= {options === "option1" ? {backgroundColor: "#6D8C8E"} : {backgroundColor: "#8EAAAC"}}
-    // >{button_text}
-    // </Question>   
+  
