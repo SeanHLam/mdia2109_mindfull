@@ -12,6 +12,7 @@ vertical-align: middle;
 background-color: #D28A7C;
 line-height: 40pt; 
 font-family: 'Oswald';
+user-select: none;
 &:hover{
     background-color: #8E6057;
 `
