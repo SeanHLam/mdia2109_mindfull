@@ -1,16 +1,18 @@
 import Head from 'next/head'
 
 import { HeadText } from "../../comps/header";
-import {ParaText} from "../../comps/body"
+import { ParaText } from "../../comps/body"
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
-import {ResourceMenu, ResourceBox} from "../../comps/resourcemenu";
-import {numberArr, linkArr} from "../../data/resourcedata";
-import {useState} from 'react';
-import {NavBar} from "../../comps/navbar";
-import {LargeButton} from "../../comps/largebutton";
-import {SmallButton} from "../../comps/smallbutton";
+import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
+import { numberArr, linkArr } from "../../data/resourcedata";
+import { useState } from 'react';
+import { NavBar } from "../../comps/navbar";
+import { LargeButton } from "../../comps/largebutton";
+import { SmallButton } from "../../comps/smallbutton";
 import { ImgDiv } from '../../comps/images';
+import { SpeechBubble } from '../../comps/speechbubble';
 
 const Cont = styled.div`
 display: flex;
@@ -18,6 +20,9 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 `
+
+
+
 
 export default function Quiz() {
   return (
@@ -29,14 +34,17 @@ export default function Quiz() {
       </Head>
 
       <main>
-      <NavBar></NavBar>
+        <NavBar></NavBar>
       </main>
       
       <Cont>
-      <ImgDiv path='/brownyexplain.svg' size='50%'></ImgDiv>
+        {/* <SpeechBubble></SpeechBubble> */}
+        <SpeechBubble speech_text='First question will be asking about your age, second question will ask about your exercise schedule    '></SpeechBubble>
+        <ImgDiv path='/brownyexplain.svg' size='70%'></ImgDiv>
+        <SmallButton></SmallButton>
       </Cont>
-    
-      
+
+
     </div>
   )
 }

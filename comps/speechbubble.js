@@ -26,7 +26,7 @@ font-family: 'Patrick Hand';
 	border-top-color: #94A9AC;
 	border-bottom: 0;
 	border-left: 0;
-	margin-left: 10pt;
+	margin-left: 140pt;
 	margin-bottom: -30px;
 }
 
