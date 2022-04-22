@@ -10,6 +10,7 @@ import {NavBar} from "../comps/navbar";
 import {LargeButton, QueButton} from "../comps/largebutton";
 import {SmallButton} from "../comps/smallbutton";
 import {Arrow} from "../comps/arrow";
+import {MindScale} from "../comps/mindscale";
 
 import {ques} from "../data/questiondata"
 
@@ -72,6 +73,7 @@ export default function Test(){
       
             <Arrow></Arrow>
             <SpeechBubble></SpeechBubble>
+            <MindScale></MindScale>
 
         
 

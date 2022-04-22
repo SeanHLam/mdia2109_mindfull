@@ -1,14 +1,22 @@
 import Head from 'next/head'
+import styled from 'styled-components';
 
 import { HeadText } from "../../comps/header";
-import {ParaText} from "../../comps/body"
+import { ParaText } from "../../comps/body"
 
-import {ResourceMenu, ResourceBox} from "../../comps/resourcemenu";
-import {numberArr, linkArr} from "../../data/resourcedata";
-import {useState} from 'react';
-import {NavBar} from "../../comps/navbar";
-import {LargeButton} from "../../comps/largebutton";
-import {SmallButton} from "../../comps/smallbutton";
+import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
+import { numberArr, linkArr } from "../../data/resourcedata";
+import { useState } from 'react';
+import { NavBar } from "../../comps/navbar";
+import { LargeButton } from "../../comps/largebutton";
+import { SmallButton } from "../../comps/smallbutton";
+import { MindScale } from "../../comps/mindscale";
+
+const ScaleCont = styled.div`
+display: grid;
+grid-template-columns: 40pt 40pt 40pt 40pt;
+`
+
 
 export default function Quiz() {
   return (
@@ -20,10 +28,19 @@ export default function Quiz() {
       </Head>
 
       <main>
-      <NavBar></NavBar>
+        <NavBar></NavBar>
+
+        <ScaleCont>
+          <MindScale scale_num='1'></MindScale>
+          <MindScale scale_num='2'></MindScale>
+          <MindScale scale_num='3'></MindScale>
+          <MindScale scale_num='4'></MindScale>
+          <MindScale scale_num='5'></MindScale>
+        </ScaleCont>
       </main>
-    
-      
+
+
     </div>
   )
 }
+
