@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import styled from 'styled-components';
 import { HeadText } from "../../comps/header";
-import {ParaText} from "../../comps/body"
-import {ques, StoreAn, GetOptions } from "../../data/questiondata"
-import {ResourceMenu, ResourceBox} from "../../comps/resourcemenu";
-import {numberArr, linkArr} from "../../data/resourcedata";
-import {useState} from 'react';
-import {NavBar} from "../../comps/navbar";
-import {LargeButton, QueButton} from "../../comps/largebutton";
-import {SmallButton} from "../../comps/smallbutton";
+import { ParaText } from "../../comps/body"
+import { ques, StoreAn, GetOptions } from "../../data/questiondata"
+import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
+import { numberArr, linkArr } from "../../data/resourcedata";
+import { useState } from 'react';
+import { NavBar } from "../../comps/navbar";
+import { LargeButton, QueButton } from "../../comps/largebutton";
+import { SmallButton } from "../../comps/smallbutton";
 import Router, { useRouter } from "next/router";
 import { ImgDiv } from '../../comps/images';
 
@@ -32,12 +32,12 @@ export default function Quiz() {
 
   const r = useRouter();
   const options = GetOptions()
-  var {qnum} = r.query;
+  var { qnum } = r.query;
 
-  if (qnum ===undefined){
+  if (qnum === undefined) {
     qnum = 0;
   }
-  
+
 
   return (
     <div>
@@ -48,44 +48,69 @@ export default function Quiz() {
       </Head>
       <NavBar></NavBar>
       <Cont>
-            
-            <HeadText text={ques[qnum].q}></HeadText>
-            
-            
-            {
-              Number(qnum) < 4 &&
-              ques[qnum].c.map((o,i)=><QueButton button_text={ques[qnum].c[i].txt} onClick = {()=> {StoreAn(qnum ,ques[qnum].c[i].num, ques[qnum].c[i].txt )}}></QueButton>)
-            }
+        <ImgDiv path={ques[qnum].i} size="20em"></ImgDiv>
+        <HeadText text={ques[qnum].q}></HeadText>
 
-          <ButtCont>
-            {
-              Number(qnum) === 4 &&
-              ques[qnum].c.map((o,i)=><ImgDiv size="20%" path={ques[qnum].c[i].ig} onClick = {()=> {StoreAn(qnum ,ques[qnum].c[i].num, ques[qnum].c[i].txt )}}></ImgDiv>)
-            }
-          </ButtCont>
-            
-        
-        
+
+        {
+          Number(qnum) < 4 &&
+          ques[qnum].c.map((o, i) => (
+            <QueButton
+              
+              button_text={ques[qnum].c[i].txt}
+              onClick={() => { StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt)}}
+              
+              >
+            </QueButton>
+          ))
+        }
+
         <ButtCont>
-          <SmallButton button_text="Back" onClick = {()=>r.push({
-    pathname:"/quiz/questions",
-    query:{
-      qnum:(Number(qnum)-1 <= 0) ? 0 : Number(qnum)-1
+          {
+            Number(qnum) === 4 &&
+            ques[qnum].c.map((o, i) =>
+              <ImgDiv size="20%" path={ques[qnum].c[i].ig}
+                onClick={() => {
+                  StoreAn(qnum, ques[qnum].c[i].num,
+                    ques[qnum].c[i].txt)
+                }}>
+              </ImgDiv>)
+          }
+        </ButtCont>
+
+
+
+        <ButtCont>
+          <SmallButton button_text="Back" onClick={() => r.push({
+            pathname: "/quiz/questions",
+            query: {
+              qnum: (Number(qnum) - 1 <= 0) ? 0 : Number(qnum) - 1
+            }
+          })}>
+          </SmallButton>
+          
+          { Number(qnum) < 4 &&
+          <SmallButton onClick={() => r.push({
+            pathname: "/quiz/questions",
+            query: {
+              qnum: (Number(qnum) + 1 >= ques.length) ? ques.length - 1 : Number(qnum) + 1
+            }
+          })}>
+          </SmallButton>
         }
-       })}> 
-       </SmallButton>
-    <SmallButton onClick = {()=>r.push({
-    pathname:"/quiz/questions",
-    query:{
-      qnum:(Number(qnum)+1 >= ques.length) ? ques.length -1 : Number (qnum)+1
+
+        { Number(qnum) === 4 &&
+          <SmallButton button_text="Finish" onClick={() => r.push({
+            pathname: "/quiz/results",
+  
+          })}>
+          </SmallButton>
         }
-       })}> 
-  </SmallButton>  
-        
+
         </ButtCont>
       </Cont>
-    
-      
+
+
     </div>
   )
 }
