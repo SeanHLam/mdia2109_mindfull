@@ -38,10 +38,12 @@ export default function Quiz() {
       </main>
       
       <Cont>
+
         {/* <SpeechBubble></SpeechBubble> */}
         <SpeechBubble speech_text='First question will be asking about your age, second question will ask about your exercise schedule    '></SpeechBubble>
         <ImgDiv path='/brownyexplain.svg' size='70%'></ImgDiv>
         <SmallButton></SmallButton>
+
       </Cont>
 
 
