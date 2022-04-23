@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { message, messageImgs } from "../data/activitydata";
+import { message, speech, num } from "../data/activitydata";
 
 const MessageItem = styled.img`
 width: 20em;
@@ -13,7 +13,11 @@ display: block;
 top: auto;
 `
 
-export function Message({path=messageImgs, size="30em", placement="relative", opacity="100%"}){
-    return <MessageItem src={path} style={{width: size, position: placement, opacity: opacity, }}/> 
+export function Message({onClick=()=>{}, path=speech[num], size="30em", placement="relative", opacity="100%"}){
+    return <MessageItem 
+    src={path} 
+    style={{width: size, position: placement, opacity: opacity, }}
+    onClick={onClick} 
+    /> 
     }
 
