@@ -7,12 +7,21 @@ font-size: 16pt;
 text-align: center;
 color: #6F5F5E;
 font-family: 'Dm Sans';
-padding: 20pt;
 `
 
-export function ParaText(
-    {text="text sample"})
-{
-return <TextItem>{text}</TextItem>
+export function ParaText
+    ({ text = "text sample",
+        color = "#6F5F5E",
+        placement = "static",
+        marginRight = "auto",
+        marginLeft = "auto",
+        marginTop = "auto",
+        marginBottom = "auto",
+
+    }) {
+    return <TextItem
+        src={text}
+        style={{ color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom }}
+    >{text}</TextItem>
 }
 

@@ -24,18 +24,22 @@ color:#F6FEFF;
 text-align: center;
 vertical-align: middle;
 Font-family: 'DM Sans';
-margin-bottom: 7rem;
+margin-bottom: 4rem;
 animation: 1.5s ${pulseAnimation} infinite ;
 `
 
 
-
-
 export function MindScale ({
-    scale_num="1",
+    scaleNum="1",
+    backgroundColor = "#8EAAAC",
+
 
 }){
-    return <Scale> {scale_num}</Scale>
+    return <Scale 
+    src={scaleNum}
+    style={{ backgroundColor: backgroundColor 
+    }}
+    >{scaleNum}</Scale>
 }
 
 
