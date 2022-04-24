@@ -12,6 +12,7 @@ import { LargeButton } from "../../comps/largebutton";
 import { SmallButton } from "../../comps/smallbutton";
 import { MindScale } from "../../comps/mindscale";
 import { ImgDiv } from '../../comps/images';
+import { Arrow } from '../../comps/arrow';
 
 const Cont = styled.div`
 display: flex;
@@ -44,10 +45,13 @@ export default function Quiz() {
       <main>
 
         <NavBar></NavBar>
-        <ImgDiv path='/leaves.gif' size='100%' placement='absolute' opacity='40%'></ImgDiv>
+
 
 
         <Cont>
+
+          <ImgDiv path='/leaves.gif' size='30rem' placement='absolute' opacity='40%'></ImgDiv>
+
           <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
 
           {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
@@ -73,9 +77,13 @@ export default function Quiz() {
 
           <HeadText text="Your mindfulness score: 5/5" color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
 
-          
+          <Arrow></Arrow>
+
+          <ImgDiv path='/brownyAdvice.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
 
         </Cont>
+
+        <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv>
       </main>
 
 

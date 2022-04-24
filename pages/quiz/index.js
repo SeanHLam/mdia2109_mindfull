@@ -1,10 +1,7 @@
 import Head from 'next/head'
-
-import { HeadText } from "../../comps/header";
-import { ParaText } from "../../comps/body"
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-
+import Router, {useRouter} from 'next/router';
+import {speech} from "../../data/speechdata";
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -22,9 +19,19 @@ flex-direction: column;
 `
 
 
+const ButtCont = styled.div`
+display: flex;
+flex-direction: row;
+`
 
+export default function Instruction() {
+  const router = useRouter();
+  var {snum} = router.query;
 
-export default function Quiz() {
+  if (snum === undefined){
+    snum = 0;
+  }
+
   return (
     <div>
       <Head>
@@ -40,13 +47,27 @@ export default function Quiz() {
       <Cont>
 
         {/* <SpeechBubble></SpeechBubble> */}
-        <SpeechBubble speech_text='First question will be asking about your age, second question will ask about your exercise schedule    '></SpeechBubble>
-        <ImgDiv path='/brownyexplain.svg' size='70%'></ImgDiv>
-        <SmallButton></SmallButton>
+        <SpeechBubble speech_text={speech[snum]}></SpeechBubble>
 
+        <ImgDiv path='/brownyexplain.svg' size='30 rem'></ImgDiv>
+
+        <ButtCont>
+          <SmallButton button_text="Back" onClick = {()=>router.push({
+            pathname:"/quiz/",
+            query:{
+              snum:(Number(snum)-1 <= 0) ? 0 : Number(snum)-1
+                }
+              })}> 
+          </SmallButton>
+          <SmallButton onClick = {()=>router.push({
+            pathname:"/quiz/",
+            query:{
+              snum:(Number(snum)+1 >= speech.length) ? speech.length-1 : Number (snum)+1
+                }
+              })}> 
+          </SmallButton>  
+        </ButtCont>
       </Cont>
-
-
     </div>
   )
 }
