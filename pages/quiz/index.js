@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components';
-import Router, {useRouter} from 'next/router';
-import {speech} from "../../data/speechdata";
+import Router, { useRouter } from 'next/router';
+import { speech } from "../../data/speechdata";
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -25,9 +25,9 @@ flex-direction: row;
 
 export default function Instruction() {
   const r = useRouter();
-  var {snum} = r.query;
+  var { snum } = r.query;
 
-  if (snum === undefined){
+  if (snum === undefined) {
     snum = 0;
   }
 
@@ -42,7 +42,7 @@ export default function Instruction() {
       <main>
         <NavBar></NavBar>
       </main>
-      
+
       <Cont>
 
         {/* <SpeechBubble></SpeechBubble> */}
@@ -50,32 +50,47 @@ export default function Instruction() {
 
         <ImgDiv path='/brownyexplain.svg' size='25 rem'></ImgDiv>
 
+
         <ButtCont>
-          <SmallButton button_text="Back" onClick = {()=>r.push({
-            pathname:"/quiz/",
-            query:{
-              snum:(Number(snum)-1 <= 0) ? 0 : Number(snum)-1
-                }
-              })}> 
-          </SmallButton>
+          {Number(snum) === 0 &&
+            <SmallButton button_text="Back" onClick={() => r.push({
+              pathname: "/home/",
+              query: {
+                snum: (Number(snum) - 1 <= 0) ? 0 : Number(snum) - 1
+              }
+            })}>
+            </SmallButton>
+          }
 
-          { Number(snum) < 3 &&
-          <SmallButton onClick = {()=>r.push({
-            pathname:"/quiz/",
-            query:{
-              snum:(Number(snum)+1 >= speech.length) ? speech.length-1 : Number (snum)+1
-                }
-              })}> 
-          </SmallButton> 
-          } 
+          {Number(snum) > 0 &&
+            <SmallButton button_text="Back" onClick={() => r.push({
+              pathname: "/quiz/",
+              query: {
+                snum: (Number(snum) - 1 <= 0) ? 0 : Number(snum) - 1
+              }
+            })}>
+            </SmallButton>
+          }
 
-          { Number(snum) === 3 &&
-          <SmallButton button_text="Let's start" onClick={() => r.push({
-            pathname: "/quiz/questions",
-  
-          })}>
-          </SmallButton>
-        }
+
+
+          {Number(snum) < 3 &&
+            <SmallButton onClick={() => r.push({
+              pathname: "/quiz/",
+              query: {
+                snum: (Number(snum) + 1 >= speech.length) ? speech.length - 1 : Number(snum) + 1
+              }
+            })}>
+            </SmallButton>
+          }
+
+          {Number(snum) === 3 &&
+            <SmallButton button_text="Let's start" onClick={() => r.push({
+              pathname: "/quiz/questions",
+
+            })}>
+            </SmallButton>
+          }
 
 
         </ButtCont>
