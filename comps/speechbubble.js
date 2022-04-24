@@ -33,7 +33,7 @@ font-family: 'Patrick Hand';
 `
 
 export function SpeechBubble({
-  speech_text="Hello! I am Browny, and I will walk you through a set of 5 questions so I can understand you better. ",
+  speech_text="",
   onClick=()=>{}
 }){
   return <Bubble onClick={onClick}>{speech_text}</Bubble>
