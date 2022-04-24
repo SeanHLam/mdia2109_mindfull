@@ -13,6 +13,14 @@ import { SmallButton } from "../../comps/smallbutton";
 import { MindScale } from "../../comps/mindscale";
 import { ImgDiv } from '../../comps/images';
 
+const Cont = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+`
+
 const ScaleCont = styled.div`
 margin: auto;
 align-items: center;
@@ -38,30 +46,36 @@ export default function Quiz() {
         <NavBar></NavBar>
         <ImgDiv path='/leaves.gif' size='100%' placement='absolute' opacity='40%'></ImgDiv>
 
-        <ImgDiv path='/singleCloud.png' size='90%' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
 
-        {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
+        <Cont>
+          <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+
+          {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
 
 
-        <ParaText text='You are older than 18 <br />
+          <ParaText text='You are older than 18 <br />
         You are happy'
 
-          placement='static'
-          marginRight='25pt'
-          marginLeft='25pt'
-        ></ParaText>
+            placement='static'
+            marginRight='25pt'
+            marginLeft='25pt'
+          ></ParaText>
 
 
-        <ScaleCont>
-          <MindScale scaleNum='1' backgroundColor='#D28A7C'></MindScale>
-          <MindScale scaleNum='2'></MindScale>
-          <MindScale scaleNum='3'></MindScale>
-          <MindScale scaleNum='4'></MindScale>
-          <MindScale scaleNum='5'></MindScale>
-          <ImgDiv path='/scaleArrow.png' size='100%' placement='absolute' opacity='100%' top="32rem"></ImgDiv>
-        </ScaleCont>
+          <ScaleCont>
+            <MindScale scaleNum='1' backgroundColor='#D28A7C'></MindScale>
+            <MindScale scaleNum='2'></MindScale>
+            <MindScale scaleNum='3'></MindScale>
+            <MindScale scaleNum='4'></MindScale>
+            <MindScale scaleNum='5'></MindScale>
+          </ScaleCont>
+          <ImgDiv path='/scaleArrow.png' size='28rem' placement='absolute' opacity='100%' top="32rem"></ImgDiv>
 
-        <HeadText text="Your mindfulness score: 5/5" color="#6F5F5E" placement="relative" marginTop="0pt" fontSize="28pt"></HeadText>
+          <HeadText text="Your mindfulness score: 5/5" color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
+
+          
+
+        </Cont>
       </main>
 
 
