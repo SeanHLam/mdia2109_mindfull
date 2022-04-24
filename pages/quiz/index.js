@@ -18,15 +18,14 @@ align-items: center;
 flex-direction: column;
 `
 
-
 const ButtCont = styled.div`
 display: flex;
 flex-direction: row;
 `
 
 export default function Instruction() {
-  const router = useRouter();
-  var {snum} = router.query;
+  const r = useRouter();
+  var {snum} = r.query;
 
   if (snum === undefined){
     snum = 0;
@@ -49,23 +48,36 @@ export default function Instruction() {
         {/* <SpeechBubble></SpeechBubble> */}
         <SpeechBubble speech_text={speech[snum]}></SpeechBubble>
 
-        <ImgDiv path='/brownyexplain.svg' size='30 rem'></ImgDiv>
+        <ImgDiv path='/brownyexplain.svg' size='25 rem'></ImgDiv>
 
         <ButtCont>
-          <SmallButton button_text="Back" onClick = {()=>router.push({
+          <SmallButton button_text="Back" onClick = {()=>r.push({
             pathname:"/quiz/",
             query:{
               snum:(Number(snum)-1 <= 0) ? 0 : Number(snum)-1
                 }
               })}> 
           </SmallButton>
-          <SmallButton onClick = {()=>router.push({
+
+          { Number(snum) < 3 &&
+          <SmallButton onClick = {()=>r.push({
             pathname:"/quiz/",
             query:{
               snum:(Number(snum)+1 >= speech.length) ? speech.length-1 : Number (snum)+1
                 }
               })}> 
-          </SmallButton>  
+          </SmallButton> 
+          } 
+
+          { Number(snum) === 3 &&
+          <SmallButton button_text="Let's start" onClick={() => r.push({
+            pathname: "/quiz/questions",
+  
+          })}>
+          </SmallButton>
+        }
+
+
         </ButtCont>
       </Cont>
     </div>
