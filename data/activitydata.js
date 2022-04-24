@@ -1,6 +1,6 @@
-import { useState } from "react";
+import {useState} from 'react'
 
-export const messageImgs = [
+export const speech = [
     "/brownyA1.png",
     "/brownyA2.png",
     "/brownyA3.png",
@@ -10,15 +10,15 @@ export const messageImgs = [
 
   export const message = speech[num]
 
-  export const [shirt, setShirt] = [
-    shirt = true,
-    useState = true
-  ]
+  // export const [shirt, setShirt] = [
 
-  var num = 0;
+  //   useState(true)
+  // ]
+
+  export var num = 0;
 
   export function CleanUp(){
-    if (shirt === false)
+    //if (shirt === false)
     num ++
 
   }

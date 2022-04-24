@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faHouse, faLightbulb, faPhone, faFlag, faCircleInfo, faUserGroup, faX } from '@fortawesome/free-solid-svg-icons'
 import { NavName, NavIcon, NavPath } from "../data/navdata";
 import Router, { useRouter } from "next/router";
-import { useReducer, useState } from "react";
+import {useState} from 'react';
 
 
 
