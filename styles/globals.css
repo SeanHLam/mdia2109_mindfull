@@ -27,3 +27,7 @@ a {
 .head{
   margin-top: 40px;
 }
+
+.test{
+  display: none;
+}
