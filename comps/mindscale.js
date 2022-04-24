@@ -1,11 +1,6 @@
 import styled from "styled-components";
 // import Router, { useRouter } from "next/router";
 
-const ScaleCont = styled.div`
-display:flex;
-flex-direction: column;
-
-`
 
 const Scale = styled.div`
 margin: 1rem;
@@ -19,7 +14,6 @@ color:#F6FEFF;
 text-align: center;
 vertical-align: middle;
 Font-family: 'DM Sans';
-
 `
 
 

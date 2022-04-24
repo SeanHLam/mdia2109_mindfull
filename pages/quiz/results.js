@@ -11,10 +11,14 @@ import { NavBar } from "../../comps/navbar";
 import { LargeButton } from "../../comps/largebutton";
 import { SmallButton } from "../../comps/smallbutton";
 import { MindScale } from "../../comps/mindscale";
+import { ImgDiv } from '../../comps/images';
 
 const ScaleCont = styled.div`
+margin: auto;
+align-items: center;
+justify-content: center;
 display: grid;
-grid-template-columns: 40pt 40pt 40pt 40pt;
+grid-template-columns: 50pt 50pt 50pt 50pt 50pt;
 `
 
 
@@ -28,6 +32,7 @@ export default function Quiz() {
       </Head>
 
       <main>
+      <ImgDiv path='/leaves.gif' size='100%' placement='absolute' opacity='40%'></ImgDiv>
         <NavBar></NavBar>
 
         <ScaleCont>
@@ -36,6 +41,7 @@ export default function Quiz() {
           <MindScale scale_num='3'></MindScale>
           <MindScale scale_num='4'></MindScale>
           <MindScale scale_num='5'></MindScale>
+          <ImgDiv path='/scaleArrow.svg' size ='100%' placement='absolute' opacity='100%'></ImgDiv>
         </ScaleCont>
       </main>
 
