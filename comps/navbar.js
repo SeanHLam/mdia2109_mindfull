@@ -77,7 +77,7 @@ width: 100%;
 max-height: 100%;
 font-family: Oswald;
 color: white;
-font-size: 28pt;
+font-size: 24pt;
 list-style-type: none;
 transition: background-color 1s;
 &:hover{
