@@ -1,6 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes }  from 'styled-components';
 // import Router, { useRouter } from "next/router";
 
+const pulseAnimation = keyframes`
+0% {
+    transform: scale(1.0);
+}
+
+25% {
+    transform: scale(1.1);
+}
+
+`;
 
 const Scale = styled.div`
 margin: 1rem;
@@ -15,7 +25,9 @@ text-align: center;
 vertical-align: middle;
 Font-family: 'DM Sans';
 margin-bottom: 7rem;
+animation: 1.5s ${pulseAnimation} infinite ;
 `
+
 
 
 

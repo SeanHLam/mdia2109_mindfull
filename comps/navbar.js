@@ -30,7 +30,7 @@ const LogoImage = styled.img`
  user-select: none;
 `   
 const LogoType = styled.img`
- height:3em;
+ height:2em;
  user-select: none;
 `
 
@@ -77,7 +77,7 @@ width: 100%;
 max-height: 100%;
 font-family: Oswald;
 color: white;
-font-size: 32pt;
+font-size: 24pt;
 list-style-type: none;
 transition: background-color 1s;
 &:hover{

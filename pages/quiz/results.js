@@ -37,7 +37,7 @@ export default function Quiz() {
         <NavBar></NavBar>
         <ImgDiv path='/leaves.gif' size='100%' placement='absolute' opacity='40%'></ImgDiv>
        
-        <HeadText text="Summary"></HeadText>
+        <HeadText text="Summary" color="#F6FEFF"></HeadText>
         <ImgDiv path='/singleCloud.png' size='90%' placement='relative' opacity='100%'></ImgDiv>
  
  
