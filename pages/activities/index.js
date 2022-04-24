@@ -13,7 +13,7 @@ import {SmallButton} from "../../comps/smallbutton";
 import { untidyImgs } from '../../data/sampledata';
 import { ImgDiv } from '../../comps/images';
 import { Message } from '../../comps/messagebrowny';
-import { message, speech, num, CleanUp  } from '../../data/activitydata';
+import { message, speech, num, CleanUp, ShirtCheck  } from '../../data/activitydata';
 
 const Cont = styled.div`
 display: flex;
@@ -24,6 +24,10 @@ z-index: auto;
 `
 
 export default function Activities() {
+  const [shirt, setShirt] = useState(true)
+
+
+
   return (
     <div>
       <Head>
@@ -43,9 +47,9 @@ export default function Activities() {
       zIndex='1' 
       marginLeft='-6em' 
       top='25em'
-      onClick={() => 
+      onClick={() =>  
+        {setShirt(false); ShirtCheck(shirt); CleanUp(); } 
         
-        console.log(num)
       }
       >
       </ImgDiv>
@@ -72,7 +76,7 @@ export default function Activities() {
       size='32em'>
       </ImgDiv>
       
-      <Message path={speech[num]}></Message>
+      <Message path={message}></Message>
       
       
       

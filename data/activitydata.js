@@ -1,4 +1,3 @@
-import {useState} from 'react'
 
 export const speech = [
     "/brownyA1.png",
@@ -8,17 +7,32 @@ export const speech = [
     "/brownyA5.png"
   ];
 
-  export const message = speech[num]
+  // export const message = speech[num]
 
-  // export const [shirt, setShirt] = [
+  // export var num = 0;
 
-  //   useState(true)
-  // ]
 
-  export var num = 0;
 
-  export function CleanUp(){
-    //if (shirt === false)
-    num ++
+  // export function CleanUp(){
+  // if (shirt === false){
+  //   num ++
+  //   console.log(num)
+  // }
+  //}
 
+var shirt = true
+
+export var num = 0;
+export  const message = speech[num]
+
+export function ShirtCheck(t){
+  shirt = t
+}
+  
+export function CleanUp(){
+   if (shirt === false){
+     num++
+     console.log(num)
   }
+}
+
