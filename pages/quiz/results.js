@@ -32,16 +32,16 @@ export default function Quiz() {
       </Head>
 
       <main>
-      <ImgDiv path='/leaves.gif' size='100%' placement='absolute' opacity='40%'></ImgDiv>
-        <NavBar></NavBar>
 
+        <NavBar></NavBar>
+        <ImgDiv path='/leaves.gif' size='100%' placement='absolute' opacity='40%'></ImgDiv>
         <ScaleCont>
           <MindScale scale_num='1'></MindScale>
           <MindScale scale_num='2'></MindScale>
           <MindScale scale_num='3'></MindScale>
           <MindScale scale_num='4'></MindScale>
           <MindScale scale_num='5'></MindScale>
-          <ImgDiv path='/scaleArrow.svg' size ='100%' placement='absolute' opacity='100%'></ImgDiv>
+          <ImgDiv path='/scaleArrow.svg' size='100%' placement='absolute' opacity='100%'></ImgDiv>
         </ScaleCont>
       </main>
 
