@@ -1,4 +1,6 @@
+import {useState, useRef} from 'react';
 import styled from "styled-components";
+
 
 
 
@@ -15,8 +17,16 @@ top: auto;
 `
 
 
+    
 
-export function ImgDiv({ onClick=()=>{},
+
+export function ImgDiv({ 
+
+
+
+
+    
+onClick=()=>{},
 path="/browny2.svg", 
 size="20em", 
 placement="relative", 
@@ -25,10 +35,23 @@ padding = "20pt",
 zIndex='auto', 
 marginRight='auto', 
 marginLeft='auto', 
-top= 'auto'}){
+top= 'auto',
+display= "block"
+}){
+
+const [image, setImage] = useState(true)
+
+
+function toggleImg(){
+            setImage(false)
+        }
+
 return <ImageItem 
 src={path} 
-style={{width: size, position: placement, opacity: opacity, zIndex: zIndex, marginRight: marginRight, marginLeft: marginLeft, top: top, padding: padding}}
-onClick={onClick} 
+style={{width: size, position: placement, opacity: opacity, zIndex: zIndex, marginRight: marginRight, marginLeft: marginLeft, top: top, padding: padding, 
+    display: image ? "block" : "none"
+}}
+onClick={onClick}   
 /> 
 }
+

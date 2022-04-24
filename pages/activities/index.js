@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { HeadText } from "../../comps/header";
 import {ParaText} from "../../comps/body"
 import styled from 'styled-components';
-
+import Router, { useRouter } from 'next/router';
 import {ResourceMenu, ResourceBox} from "../../comps/resourcemenu";
 import {numberArr, linkArr} from "../../data/resourcedata";
 import {useState} from 'react';
@@ -11,9 +11,9 @@ import {NavBar} from "../../comps/navbar";
 import {LargeButton} from "../../comps/largebutton";
 import {SmallButton} from "../../comps/smallbutton";
 import { untidyImgs } from '../../data/sampledata';
-import { ImgDiv } from '../../comps/images';
+import { ImgDiv, returnClick } from '../../comps/images';
 import { Message } from '../../comps/messagebrowny';
-import { message, speech, num, CleanUp  } from '../../data/activitydata';
+import { message, speech, CleanUp  } from '../../data/activitydata';
 
 const Cont = styled.div`
 display: flex;
@@ -24,6 +24,13 @@ z-index: auto;
 `
 
 export default function Activities() {
+  const r = useRouter();
+  var { num } = r.query;
+
+  if (num === undefined) {
+    num = 0;
+  }
+  
   return (
     <div>
       <Head>
@@ -43,10 +50,13 @@ export default function Activities() {
       zIndex='1' 
       marginLeft='-6em' 
       top='25em'
-      onClick={() => 
-        
-        console.log(num)
-      }
+      onClick={() => r.push({
+          pathname: "/activities",
+          query: {
+            num: Number(num) >= 1  ? Number(num) + 1 : Number(num) 
+          }
+        })
+      } 
       >
       </ImgDiv>
      
@@ -55,7 +65,17 @@ export default function Activities() {
       size='6em' 
       placement='absolute' 
       zIndex='1' marginLeft='1em' 
-      top='25em'>
+      top='25em'
+      className={".test"}
+      onClick={() => r.push({
+        pathname: "/activities",
+        query: {
+          num: Number(num) >= 1  ? Number(num) + 1 : Number(num) 
+        }
+      })
+    }
+      >
+        
       </ImgDiv>
      
       <ImgDiv 
@@ -64,7 +84,15 @@ export default function Activities() {
       placement='absolute' 
       zIndex='1' 
       marginLeft='7em' 
-      top='28em'>
+      top='28em'
+      onClick={() => r.push({
+        pathname: "/activities",
+        query: {
+          num: Number(num) >= 1  ? Number(num) + 1 : Number(num) 
+        }
+      })
+    }
+      >
       </ImgDiv>
       
       <ImgDiv 
@@ -72,9 +100,21 @@ export default function Activities() {
       size='32em'>
       </ImgDiv>
       
-      <Message path={speech[num]}></Message>
+
+
+
+      <Message onClick={() => r.push({
+        pathname: "/activities",
+        query: {
+          num: Number(num) === 0  ? Number(num) + 1 : Number(num) 
+        }
+
+      })} path={speech[num]}></Message>
       
-      
+      {
+          Number(num) === 4 &&
+          <LargeButton button_text="Take me back home"></LargeButton>
+        }
       
       </Cont>
     
@@ -82,3 +122,6 @@ export default function Activities() {
     </div>
   )
 }
+
+
+
