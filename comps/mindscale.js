@@ -14,6 +14,7 @@ color:#F6FEFF;
 text-align: center;
 vertical-align: middle;
 Font-family: 'DM Sans';
+margin-bottom: 7rem;
 `
 
 
