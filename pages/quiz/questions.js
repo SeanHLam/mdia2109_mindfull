@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components';
 import { HeadText } from "../../comps/header";
 import { ParaText } from "../../comps/body"
-import { ques, StoreAn, GetOptions } from "../../data/questiondata"
+import { ques, StoreAn, GetOptions, addMind } from "../../data/questiondata"
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -100,10 +100,11 @@ export default function Quiz() {
         }
 
         { Number(qnum) === 4 &&
-          <SmallButton button_text="Finish" onClick={() => r.push({
+          <SmallButton button_text="Finish" onClick={() => 
+            r.push({
             pathname: "/quiz/results",
   
-          })}>
+          },addMind())}>
           </SmallButton>
         }
 

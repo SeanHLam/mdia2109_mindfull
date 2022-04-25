@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { HeadText } from "../../comps/header";
 import { ParaText } from "../../comps/body"
-
+import { ques, StoreAn, GetOptions, addMind, mindScore, options } from "../../data/questiondata"
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -57,8 +57,12 @@ export default function Quiz() {
           {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
 
 
-          <ParaText text='You are older than 18 <br />
-        You are happy'
+          <ParaText text={
+            `You are ${options[0]}
+            You are happ
+            
+            
+            `}
 
             placement='static'
             marginRight='25pt'
@@ -75,7 +79,7 @@ export default function Quiz() {
           </ScaleCont>
           <ImgDiv path='/scaleArrow.png' size='28rem' placement='absolute' opacity='100%' top="32rem"></ImgDiv>
 
-          <HeadText text="Your mindfulness score: 5/5" color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
+          <HeadText text={`Your mindfulness score: ${mindScore} / 5`}  color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
 
           <Arrow></Arrow>
 
@@ -84,6 +88,8 @@ export default function Quiz() {
         </Cont>
 
         <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv>
+
+        <LargeButton></LargeButton>
       </main>
 
 
