@@ -1,17 +1,78 @@
 import Head from 'next/head'
+import styled, { keyframes } from 'styled-components';
 
 import { HeadText } from "../../comps/header";
-import {ParaText} from "../../comps/body"
+import { ParaText } from "../../comps/body"
 
-import {ResourceMenu, ResourceBox} from "../../comps/resourcemenu";
-import {numberArr, linkArr} from "../../data/resourcedata";
-import {useState} from 'react';
-import {NavBar} from "../../comps/navbar";
-import {LargeButton} from "../../comps/largebutton";
-import {SmallButton} from "../../comps/smallbutton";
+import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
+import { numberArr, linkArr } from "../../data/resourcedata";
+import { useState } from 'react';
+import { NavBar } from "../../comps/navbar";
+import { LargeButton } from "../../comps/largebutton";
+import { SmallButton } from "../../comps/smallbutton";
+import { ImgDiv } from '../../comps/images';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+
+
+const bubbleAnimation = keyframes`
+0% {
+    transform: scale(1.0);
+}
+
+25% {
+    transform: scale(1.1);
+}
+`;
+
+
+const Moon = styled.div`
+position: absolute;
+height: 60px;
+width: 60px;
+border-radius: 50%;
+box-shadow: 15px 15px 0 0 #D28A7C;
+margin-top: -25px;
+margin-left: 75px;
+z-index: 0;
+opacity: 100%;
+animation: 3s ${bubbleAnimation} infinite ;
+`
+
+const Cont = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+`
+
+const StarCont = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-right: 20rem;
+margin-top: -12rem;
+animation: 2s ${bubbleAnimation} infinite;
+
+`
+const StarCont2 = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-left: 10rem;
+margin-top: 10rem;
+animation: 1s ${bubbleAnimation} infinite ;
+`
+
+
 
 export default function About() {
-  
+
   return (
     <div>
       <Head>
@@ -21,10 +82,32 @@ export default function About() {
       </Head>
 
       <main>
-      <NavBar></NavBar>
+        <NavBar></NavBar>
+
+        <Cont>
+
+          <HeadText text="Our Mission" marginTop="3rem"></HeadText>
+
+          <ParaText marginLeft="2rem" marginRight=" 3rem" marginTop="2rem" text="Mindfull's mission is to provide information about  mental health in a fun and interactive way, all to help people handling stress."></ParaText>
+
+          <Moon></Moon>
+
+
+          <ImgDiv path='/raccoon_4.png' size='20rem' placement='relative' opacity='100%'
+            top="4rem" marginLeft='1rem' marginRight='1rem' ></ImgDiv>
+
+        </Cont>
+
+        <StarCont>
+          <FontAwesomeIcon icon={faStar} size="3x" color="#f6feff"></FontAwesomeIcon>
+        </StarCont>
+
+        <StarCont2>
+          <FontAwesomeIcon icon={faStar} size="3x" color="#f6feff"></FontAwesomeIcon>
+        </StarCont2>
       </main>
-    
-      
+
+
     </div>
   )
 }

@@ -12,7 +12,7 @@ font-family: 'Patrick Hand';
 export function HeadText({ text = "text sample", color = "#6F5F5E",
 	placement = "static",
 	marginTop = 'auto',
-	fontSize= '38pt',
+	fontSize = '38pt',
 
 }) {
 	return <TextItem src={text}

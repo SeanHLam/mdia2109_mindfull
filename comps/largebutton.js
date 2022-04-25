@@ -1,7 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes }  from 'styled-components';
 import Router, { useRouter } from "next/router";
 import { useState } from "react";
 import {  } from "../data/questiondata";
+
+const bounceAnimation = keyframes`
+50% {
+    transform: translateY(5px);
+}
+
+`;
 
 const Button = styled.div`
 
@@ -20,12 +27,12 @@ font-family: 'Oswald';
 user-select: none;
 &:hover{
     background-color: #8E6057;
-    
+    animation: 1s ${bounceAnimation} ;
 `
 
 const Question = styled.div`
 
-margin: 2rem;
+margin: 1rem;
 width: 220pt;
 height: 40pt;
 border-radius: 15pt;
@@ -39,6 +46,7 @@ font-family: 'Oswald';
 user-select: none;
 &:hover{
     background-color: #6D8C8E;
+
 `
 const QueCont = styled.div`
 

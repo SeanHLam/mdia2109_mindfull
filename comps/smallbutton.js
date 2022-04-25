@@ -1,4 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes }  from 'styled-components';
+
+const bounceAnimation = keyframes`
+50% {
+    transform: translateY(-5px);
+}
+
+`;
 
 const Button = styled.div`
 margin: 2rem;
@@ -15,6 +22,7 @@ font-family: 'Oswald';
 user-select: none;
 &:hover{
     background-color: #8E6057;
+    animation: 1s ${bounceAnimation} ;
 `
 
 
