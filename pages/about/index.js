@@ -21,9 +21,11 @@ const bubbleAnimation = keyframes`
 }
 
 25% {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 `;
+
+
 
 
 const Moon = styled.div`
