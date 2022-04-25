@@ -33,7 +33,7 @@ font-size: 18pt;
 color:#F6FEFF;
 text-align: center;
 vertical-align: middle;
-background-color: #8EAAAC;
+background-color: black;
 line-height: 40pt; 
 font-family: 'Oswald';
 user-select: none;
@@ -45,7 +45,13 @@ const QueCont = styled.div`
 `
 
 
-export function LargeButton({button_text="Happy Large Button", next="/home"}){
+export function LargeButton({
+
+button_text="Happy Large Button", 
+next="/home",
+
+
+}){
     const r = useRouter()
     
     
@@ -59,14 +65,16 @@ export function LargeButton({button_text="Happy Large Button", next="/home"}){
 
 
 
-export function QueButton({button_text="Happy Large Button", onClick=()=>{}}){
+export function QueButton({bgcol = "#8EAAAC", button_text="Happy Large Button", onClick=()=>{}}){
     const [options, setOptions] = useState()
     
     return <QueCont >
         
         
-        <Question onClick={onClick} 
-                 >
+        <Question 
+        onClick={onClick}
+        style={{backgroundColor: bgcol}}
+            >
             {button_text}
         </Question>       
         

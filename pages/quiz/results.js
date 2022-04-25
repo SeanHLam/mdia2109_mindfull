@@ -13,6 +13,7 @@ import { SmallButton } from "../../comps/smallbutton";
 import { MindScale } from "../../comps/mindscale";
 import { ImgDiv } from '../../comps/images';
 import { Arrow } from '../../comps/arrow';
+import { Bullet } from '../../comps/bullet';
 
 const Cont = styled.div`
 display: flex;
@@ -57,17 +58,24 @@ export default function Quiz() {
           {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
 
 
-          <ParaText text={
+          {/* <ParaText text={
             `You are ${options[0]}
             You are happ
-            
             
             `}
 
             placement='static'
             marginRight='25pt'
             marginLeft='25pt'
-          ></ParaText>
+          ></ParaText> */}
+
+          <ul>
+            <Bullet text={`You are ${options[0]}`} ></Bullet>
+            <Bullet text={`You are exercising ${options[1]}`} ></Bullet>
+            <Bullet text={`You are ${options[2]}`} ></Bullet>
+            <Bullet text={`You are ${options[3]}`} ></Bullet>
+            <Bullet text={`You are feeling ${options[4]}!`} ></Bullet>
+          </ul>
 
 
           <ScaleCont>
