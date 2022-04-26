@@ -79,11 +79,20 @@ export default function Quiz() {
 
 
           <ScaleCont>
-            <MindScale scaleNum='1' backgroundColor='#D28A7C'></MindScale>
+
+            
+
+            {options.map((o,i) => <MindScale
+            scaleNum= {i+1}
+            backgroundColor= {mindScore === i+1 ? '#D28A7C' :"#8EAAAC"  }
+            
+            > </MindScale>)}
+
+            {/* <MindScale scaleNum='1' backgroundColor='#D28A7C'></MindScale>
             <MindScale scaleNum='2'></MindScale>
             <MindScale scaleNum='3'></MindScale>
             <MindScale scaleNum='4'></MindScale>
-            <MindScale scaleNum='5'></MindScale>
+            <MindScale scaleNum='5'></MindScale> */}
           </ScaleCont>
           <ImgDiv path='/scaleArrow.png' size='28rem' placement='absolute' opacity='100%' top="32rem"></ImgDiv>
 
