@@ -7,6 +7,7 @@ font-size: 16pt;
 text-align: center;
 color: #6F5F5E;
 font-family: 'Dm Sans';
+white-space: pre-line;
 `
 
 export function ParaText

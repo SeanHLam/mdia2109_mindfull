@@ -6,12 +6,12 @@ export const ques = [
     q: "How old are you?",
     c: [
         {
-        txt: "I’m 15 - 18 years old",
+        txt: "15 - 18 years old",
         num: 0,
         },
 
         {
-        txt: "I’m older than 18",
+        txt: "older than 18",
         num: 0,
         }
     ],
@@ -42,7 +42,7 @@ export const ques = [
             q: "How much are you eating in a day?",
             c: [
                 {
-                txt: "I feel I eat too much",
+                txt: "I eat too much",
                 num: -1,
                 },
         
@@ -52,7 +52,7 @@ export const ques = [
                 },
 
                 {
-                txt: "I feel I don’t eat enough",
+                txt: "I don’t eat enough",
                 num: -1,
                 }
             ],
@@ -120,11 +120,26 @@ export const ques = [
 
 ]
 
-var options = []
+export var options = []
 
 var value = []
 
-var mindScore = 0
+export var mindScore = 0
+
+export function addMind(){
+    for(var i = 0; i < value.length; i++){
+        if(value[i] != null){
+            mindScore += value[i]
+        }
+    }
+    if(mindScore > 5){
+        mindScore = 5
+    }
+    if(mindScore < 1){
+        mindScore = 1
+    }
+    console.log(mindScore)
+}
 
 
 export function GetOptions(){

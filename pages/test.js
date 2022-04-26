@@ -15,6 +15,7 @@ import {MindScale} from "../comps/mindscale";
 import {ques} from "../data/questiondata"
 
 import {SpeechBubble} from "../comps/speechbubble";
+import { Bullet } from '../comps/bullet';
 
 
 <Head>
@@ -74,11 +75,16 @@ export default function Test(){
             <Arrow></Arrow>
             <SpeechBubble></SpeechBubble>
             <MindScale></MindScale>
-
-        
+          
+          
+        <ul>
+          <Bullet></Bullet>
+        </ul>
 
         </div>
 }
+
+
 
 
 

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components';
 import { HeadText } from "../../comps/header";
 import { ParaText } from "../../comps/body"
-import { ques, StoreAn, GetOptions } from "../../data/questiondata"
+import { ques, StoreAn, GetOptions, addMind, options} from "../../data/questiondata"
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -33,6 +33,7 @@ export default function Quiz() {
   const r = useRouter();
   const options = GetOptions()
   var { qnum } = r.query;
+  var {click} = r.query
 
   if (qnum === undefined) {
     qnum = 0;
@@ -58,7 +59,14 @@ export default function Quiz() {
             <QueButton
               
               button_text={ques[qnum].c[i].txt}
-              onClick={() => { StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt)}}
+              onClick={() => r.replace({
+                pathname: "/quiz/questions",
+                query:{
+                  qnum: Number(qnum),
+                  click: Number(i)
+                }}, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt))}
+
+                bgcol= {Number(click) === i ? "#6D8C8E" : "#8EAAAC"}
               
               >
             </QueButton>
@@ -77,11 +85,12 @@ export default function Quiz() {
               </ImgDiv>)
           }
         </ButtCont>
+        
 
 
 
         <ButtCont>
-          <SmallButton button_text="Back" onClick={() => r.push({
+          <SmallButton button_text="Back" onClick={() => r.replace({
             pathname: "/quiz/questions",
             query: {
               qnum: (Number(qnum) - 1 <= 0) ? 0 : Number(qnum) - 1
@@ -90,20 +99,22 @@ export default function Quiz() {
           </SmallButton>
           
           { Number(qnum) < 4 &&
-          <SmallButton onClick={() => r.push({
+          <SmallButton onClick={() => r.replace({
             pathname: "/quiz/questions",
             query: {
-              qnum: (Number(qnum) + 1 >= ques.length) ? ques.length - 1 : Number(qnum) + 1
+              qnum:  options[qnum]!= null ? (Number(qnum) + 1 >= ques.length) ? ques.length - 1 : Number(qnum) + 1 : Number(qnum)
             }
           })}>
           </SmallButton>
         }
 
         { Number(qnum) === 4 &&
-          <SmallButton button_text="Finish" onClick={() => r.push({
-            pathname: "/quiz/results",
-  
-          })}>
+          <SmallButton button_text="Finish" onClick={() => 
+              options[qnum] != null &&
+              r.push({
+            pathname: "/quiz/results" 
+ 
+          },addMind())}>
           </SmallButton>
         }
 
