@@ -26,10 +26,11 @@ z-index: auto;
 export default function Activities() {
   const r = useRouter();
   var { num } = r.query;
+  var {shirt} = r.query;
+  var {apple} = r.query;
+  var {book} = r.query;
 
-  if (num === undefined) {
-    num = 0;
-  }
+ 
   
   return (
     <div>
@@ -50,13 +51,19 @@ export default function Activities() {
       zIndex='1' 
       marginLeft='-6em' 
       top='25em'
-      onClick={() => r.push({
+      onClick={() => 
+        
+        r.push({
           pathname: "/activities",
           query: {
-            num: Number(num) >= 1  ? Number(num) + 1 : Number(num) 
+            num: Number(num) >= 1  ? Number(num) + 1 : Number(num),
+            shirt: true,
+            apple: apple,
+            book: book
           }
         })
       } 
+      display = {shirt=== "true" && "none"}
       >
       </ImgDiv>
      
@@ -70,11 +77,15 @@ export default function Activities() {
       onClick={() => r.push({
         pathname: "/activities",
         query: {
-          num: Number(num) >= 1  ? Number(num) + 1 : Number(num) 
+          num: Number(num) >= 1  ? Number(num) + 1 : Number(num),
+          apple: true,
+          shirt: shirt,
+          book: book,
         }
       })
-    }
-      >
+    } 
+    display = {apple=== "true" && "none"}
+    >
         
       </ImgDiv>
      
@@ -88,11 +99,15 @@ export default function Activities() {
       onClick={() => r.push({
         pathname: "/activities",
         query: {
-          num: Number(num) >= 1  ? Number(num) + 1 : Number(num) 
+          num: Number(num) >= 1  ? Number(num) + 1 : Number(num),
+          shirt: shirt,
+          apple: apple,
+          book: true
         }
       })
-    }
-      >
+    } 
+    display = {book=== "true" && "none"}
+    >
       </ImgDiv>
       
       <ImgDiv 
