@@ -10,10 +10,13 @@ height: auto;
 padding: auto;
 margin-left: auto;
 margin-right: auto;
+margin-bottom:auto;
+margin-top:auto;
 position: relative;
 display: block;
 z-index: auto;
 top: auto;
+left:auto;
 `
 
 
@@ -35,7 +38,10 @@ padding = "20pt",
 zIndex='auto', 
 marginRight='auto', 
 marginLeft='auto', 
+marginBottom='auto',
+marginTop='auto',
 top= 'auto',
+left='auto',
 display= "block"
 }){
 
@@ -48,7 +54,7 @@ function toggleImg(){
 
 return <ImageItem 
 src={path} 
-style={{width: size, position: placement, opacity: opacity, zIndex: zIndex, marginRight: marginRight, marginLeft: marginLeft, top: top, padding: padding, 
+style={{width: size, position: placement, opacity: opacity, zIndex: zIndex, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop,marginBottom: marginBottom, top: top, left:left, padding: padding, 
     display: image ? "block" : "none"
 }}
 onClick={onClick}   
