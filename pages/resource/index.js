@@ -4,22 +4,48 @@ import { HeadText } from "../../comps/header";
 import {ParaText} from "../../comps/body"
 import styled from 'styled-components';
 
-import {ResourceMenu, ResourceBox} from "../../comps/resourcemenu";
-import {numberArr, linkArr} from "../../data/resourcedata";
-import {useState} from 'react';
+import {ResourceMenu} from "../../comps/resourcemenu";
+import React,{useState} from 'react';
 import {NavBar} from "../../comps/navbar";
-import {LargeButton} from "../../comps/largebutton";
-import {SmallButton} from "../../comps/smallbutton";
 import { ImgDiv } from '../../comps/images';
+import {useRouter} from 'next/router';
 
 const Cont = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+animation: floatInFromTop 1s linear forwards, floating ease-in-out 3s infinite;
+`
+
+const PhoneCont = styled.div`
+display:flex;
+justify-content:center;
+align-content:center;
+position:relative;
+top:50px;
+left:-25px;
+`
+
+const TapMe = styled.div`
+font-size:12px;
+position:absolute;
+color:#6F5F5E;
+font-family: 'Patrick Hand';
+margin-left: 150px;
+text-align:center;
+width:120pt;
+`
+const RainCont = styled.div`
+display:flex;
+justify-content:center;
+
 `
 
 export default function Resource() {
+
+  const [show,setShow] = useState(true)
+
   return (
     <div>
       <Head>
@@ -33,9 +59,46 @@ export default function Resource() {
       </main>
 
       <Cont>
-      <ImgDiv path='/clouds.svg' size='50%'></ImgDiv>
+
+      {show? <ImgDiv
+      path='/clouds.svg'
+      size='25em'
+      top='25px'>
+      </ImgDiv> :''}
+  
+      {show? '' :<ImgDiv
+      path='/umbrella.svg'
+      size='25em'
+      placement='absolute'
+      marginLeft='-250px'
+      top='-50px'
+       >
+      </ImgDiv>}
+
       </Cont>
-    
+      
+      <PhoneCont>
+
+        {show? 
+        <ImgDiv path ='/phone.svg' size= '13em' marginBottom='50pt' onClick = {()=>setShow(false)}>
+        </ImgDiv> : <ImgDiv path ='/phone.svg' size= '10em' top='60pt' left='-40px' ></ImgDiv>}
+
+        <TapMe>
+           {
+           show?<h1 style={{fontSize: "36px"}}> Tap me!</h1>:<h1 style={{marginLeft: "5px", marginTop:"100px"}}> It's important to reach out!</h1>
+           }
+        </TapMe>
+      </PhoneCont>
+      {show? '' :<ResourceMenu></ResourceMenu>}
+
+      <RainCont>
+      {show? '' :
+      <ImgDiv
+      path='/rain.gif'
+      placement='absolute'
+      top='70px'
+      opacity='15%'></ImgDiv>}
+      </RainCont>
       
     </div>
   )

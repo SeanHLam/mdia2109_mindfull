@@ -18,11 +18,13 @@ export function ParaText
         marginLeft = "auto",
         marginTop = "auto",
         marginBottom = "auto",
+        fontSize = "14pt",
+        textAlign = "center",
 
     }) {
     return <TextItem
         src={text}
-        style={{ color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom }}
+        style={{ color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom, fontSize: fontSize, textAlign: textAlign }}
     >{text}</TextItem>
 }
 

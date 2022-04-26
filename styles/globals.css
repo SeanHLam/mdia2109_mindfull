@@ -32,6 +32,25 @@ a {
   display: none;
 }
 
+
 ul{
   margin-top: -1.5em;
 }
+
+@keyframes floatInFromTop {
+  from {
+    opacity: 0%;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(5px, 15px); }
+  100%   { transform: translate(0, -0px); } 
+}
+
