@@ -77,11 +77,13 @@ export default function Quiz() {
           {
             Number(qnum) === 4 &&
             ques[qnum].c.map((o, i) =>
-              <ImgDiv size="20%" path={ques[qnum].c[i].ig}
-                onClick={() => {
-                  StoreAn(qnum, ques[qnum].c[i].num,
-                    ques[qnum].c[i].txt)
-                }}>
+              <ImgDiv size="20%" path={Number(click) === i? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
+                onClick={() => r.replace({
+                  pathname: "/quiz/questions",
+                  query:{
+                    qnum: Number(qnum),
+                    click: Number(i)
+                  }}, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt))}>
               </ImgDiv>)
           }
         </ButtCont>

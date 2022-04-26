@@ -86,31 +86,36 @@ export const ques = [
                 {
                 txt: "Great",
                 num: 2,
-                ig: "/superHappy.svg"
+                ig: "/great.png",
+                sel:"/greatsel.png"
                 },
 
                 {
                 txt: "Good",
                 num: 1,
-                ig: "/happy.svg"
+                ig: "/happy.png",
+                sel:"/happysel.png"
                 },
         
                 {
                     txt: "Okay",
                     num: 0,
-                    ig:"/neutral.svg"
+                    ig:"/neutral.png",
+                    sel:"/neutralsel.png"
                 },
                 
                 {
                 txt: "Bad",
                 num: -1,
-                ig:"/sad.svg"
+                ig:"/sad.png",
+                sel:"/sadsel.png"
                 },
 
                 {
                 txt: "Awful",
                 num: -2,
-                ig: "/superSad.svg"
+                ig: "/awful.png",
+                sel:"/awfulsel.png"
                 },
             ],
             i: "/brownyexplain.svg" , 
