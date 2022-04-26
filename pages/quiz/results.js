@@ -24,17 +24,16 @@ align-items: center;
 `
 
 const ScaleCont = styled.div`
-margin: auto;
+margin: 0;
 align-items: center;
 justify-content: center;
-display: grid;
-grid-template-columns: 50pt 50pt 50pt 50pt 50pt;
-margin-top: 5rem;
+display: flex;
 `
 
 
 
 export default function Quiz() {
+  const temp = [1,2,3,4,5];
   return (
     <div>
       <Head>
@@ -58,17 +57,6 @@ export default function Quiz() {
           {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
 
 
-          {/* <ParaText text={
-            `You are ${options[0]}
-            You are happ
-            
-            `}
-
-            placement='static'
-            marginRight='25pt'
-            marginLeft='25pt'
-          ></ParaText> */}
-
           <ul>
             <Bullet text={`You are ${options[0]}`} ></Bullet>
             <Bullet text={`You are exercising ${options[1]}`} ></Bullet>
@@ -77,24 +65,15 @@ export default function Quiz() {
             <Bullet text={`You are feeling ${options[4]}!`} ></Bullet>
           </ul>
 
-
+          <ImgDiv path='/scaleArrow.png' size='28rem' marginLeft="0" marginRight="0" ></ImgDiv>
           <ScaleCont>
-
-            
-
-            {options.map((o,i) => <MindScale
+            {temp.map((o,i) => <MindScale
             scaleNum= {i+1}
             backgroundColor= {mindScore === i+1 ? '#D28A7C' :"#8EAAAC"  }
             
             > </MindScale>)}
-
-            {/* <MindScale scaleNum='1' backgroundColor='#D28A7C'></MindScale>
-            <MindScale scaleNum='2'></MindScale>
-            <MindScale scaleNum='3'></MindScale>
-            <MindScale scaleNum='4'></MindScale>
-            <MindScale scaleNum='5'></MindScale> */}
           </ScaleCont>
-          <ImgDiv path='/scaleArrow.png' size='28rem' placement='absolute' opacity='100%' top="32rem"></ImgDiv>
+         
 
           <HeadText text={`Your mindfulness score: ${mindScore} / 5`}  color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
 
@@ -102,11 +81,12 @@ export default function Quiz() {
 
           <ImgDiv path='/brownyAdvice.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
 
+          <LargeButton></LargeButton>
         </Cont>
 
         <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv>
 
-        <LargeButton></LargeButton>
+        
       </main>
 
 
