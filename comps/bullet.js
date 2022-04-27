@@ -17,11 +17,11 @@ export function Bullet
         marginRight = "2em",
         marginLeft = "auto",
         marginTop = "auto",
-        marginBottom = "auto",
+        marginBottom = "1em",
 
     }) {
     return <LiItem
-        src={text}
+        
         style={{ color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom }}
     >{text}</LiItem>
 }

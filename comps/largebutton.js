@@ -12,7 +12,7 @@ const bounceAnimation = keyframes`
 
 const Button = styled.div`
 
-margin: 2rem;
+margin: 1rem;
 width: 220pt;
 height: 40pt;
 z-index: 1;

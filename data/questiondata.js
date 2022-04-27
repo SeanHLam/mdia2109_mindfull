@@ -17,7 +17,8 @@ export const ques = [
     ],
     i: "/brownyexplain.svg" , 
     a: 0,
-    selected: ""
+    selected: "",
+    ic: 0
     },
     
     {
@@ -35,7 +36,8 @@ export const ques = [
         ],
         i: "/brownyrun.svg",
         a: 0,
-        selected: ""
+        selected: "",
+        ic: 0
         },
 
         {
@@ -58,7 +60,8 @@ export const ques = [
             ],
             i: "/brownyEating.svg",
             a: 0,
-            selected: ""
+            selected: "",
+            ic: 0
             },
 
         {
@@ -76,7 +79,8 @@ export const ques = [
         ],
         i: "/brownysleep.svg",
         a: 0,
-        selected: ""
+        selected: "",
+        ic: 0
         },
 
         {
@@ -120,12 +124,15 @@ export const ques = [
             ],
             i: "/brownyexplain.svg" , 
             a: 0,
-            selected: ""
+            selected: "",
+            ic: 0
             },
 
 ]
 
 export var options = []
+
+export var optionnum = []
 
 var value = []
 
@@ -149,14 +156,17 @@ export function addMind(){
 
 export function GetOptions(){
 	return options;
+    
 }
 
-export function StoreAn(qno,mnum,txt){
+export function StoreAn(qno,mnum,txt, qIndex){
     ques[qno].a = mnum
     ques[qno].selected = txt
+    ques[qno].ic = qIndex
     value[qno] = ques[qno].a
     options[qno] = ques[qno].selected
-    console.log(value, options)
+    optionnum[qno] = ques[qno].ic
+    console.log(value, options, optionnum)
   }
 
 
