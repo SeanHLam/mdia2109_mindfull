@@ -20,7 +20,7 @@ const StatList  = styled.ul`
 margin: 0;
 `
 const ListItem = styled.li`
-font-size: 18pt;
+font-size: 14pt;
 color: #6F5F5E;
 font-family: 'Dm Sans';
 text-align: left;
@@ -35,7 +35,7 @@ export function Stat({
 
 }){
     return <StatCont>
-        <FontAwesomeIcon icon={statIcon} size="4x" color="#D28A7C"></FontAwesomeIcon>
+        <FontAwesomeIcon icon={statIcon} size="3x" color="#D28A7C"></FontAwesomeIcon>
         <StatList>
             <ListItem>{point1}</ListItem>
             <ListItem>{point2}</ListItem>
