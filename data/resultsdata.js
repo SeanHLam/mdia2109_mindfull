@@ -91,26 +91,27 @@ export const Results = [
          },
 
          {
-            text1: `You eeeare doing very well. Keep it going!`,
-            text2:`Exercising is a key part of staying healthy physically and mentally.`
+            text1: `It's always good to try and exercise more`,
+            text2:`If you don't have a lot of time, start small with short walks every day`
          },
       ] },
 
       {icon: faUtensils,
          choices:[
             {
-               text1: `You are doing very well. Keep it going!`,
-               text2:`Exercising is a key part of staying healthy physically and mentally.`
+               text1: `Overeating can be a symptom of stress`,
+               text2:`Try and be more mindful about what and when you're eating`
             },
    
             {
-               text1: `You are doing very well. Keep it going!`,
-               text2:`Exercising is a key part of staying healthy physically and mentally.`
+               text1: `It's great that you're eating well!
+               `,
+               text2:`Remember to also take nutrition into consideration when eating.`
             },
 
             {
-               text1: `You are doing very well. Keep it going!`,
-               text2:`Exercising is a key part of staying healthy physically and mentally.`
+               text1: `Undereating can lead to a lot of different health issues`,
+               text2:`Try to set some reminders to let yourself eat`
             },
 
          ] },
@@ -118,41 +119,41 @@ export const Results = [
          {icon: faBed,
             choices:[
                {
-                  text1: `You are doing very well. Keep it going!`,
-                  text2:`Exercising is a key part of staying healthy physically and mentally.`
+                  text1: `You're sleeping a healthy amount!`,
+                  text2:`Sleeping helps with processing emotional information and improving physical health.`
                },
       
                {
-                  text1: `You are doing very well. Keep it going!`,
-                  text2:`Exercising is a key part of staying healthy physically and mentally.`
+                  text1: `Not getting enough sleep can be bad for your mental and physical health`,
+                  text2:`Try setting up a curfew for yourself and put all devices away in bed`
                },
             ] },
 
             {icon: faCloud,
                choices:[
                   {
-                     text1: `You are doing very well. Keep it going!`,
-                     text2:`Exercising is a key part of staying healthy physically and mentally.`
+                     text1: `We're glad to see you happy!`,
+                     text2:`Staying positive will boost your mental health.`
                   },
          
                   {
-                     text1: `You are doing very well. Keep it going!`,
-                     text2:`Exercising is a key part of staying healthy physically and mentally.`
+                     text1: `We're glad to see you happy!`,
+                     text2:`Staying positive will boost your mental health.`
                   },
 
                   {
-                     text1: `You are doing very well. Keep it going!`,
-                     text2:`Exercising is a key part of staying healthy physically and mentally.`
+                     text1: `We're glad to see you happy!`,
+                     text2:`Staying positive will boost your mental health.`
                   },
 
                   {
-                     text1: `You are doing very well. Keep it going!`,
-                     text2:`Exercising is a key part of staying healthy physically and mentally.`
+                     text1: `We're glad to see you happy!`,
+                     text2:`Staying positive will boost your mental health.`
                   },
 
                   {
-                     text1: `You are doing very well. Keep it going!`,
-                     text2:`Exercising is a key part of staying healthy physically and mentally.`
+                     text1: `We're glad to see you happy!`,
+                     text2:`Staying positive will boost your mental health.`
                   },
                ] },
 
