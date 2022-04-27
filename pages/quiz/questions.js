@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components';
 import { HeadText } from "../../comps/header";
 import { ParaText } from "../../comps/body"
-import { ques, StoreAn, GetOptions, addMind, options} from "../../data/questiondata"
+import { ques, StoreAn, GetOptions, addMind} from "../../data/questiondata"
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -11,6 +11,7 @@ import { LargeButton, QueButton } from "../../comps/largebutton";
 import { SmallButton } from "../../comps/smallbutton";
 import Router, { useRouter } from "next/router";
 import { ImgDiv } from '../../comps/images';
+import { MindScale } from "../../comps/mindscale";
 
 
 
@@ -22,14 +23,14 @@ flex-direction: column;
 `
 
 
-const ButtCont = styled.div`
+const QuizCont = styled.div`
 display: flex;
 
 flex-direction: row;
 `
 
 export default function Quiz() {
-
+  const scale = [1,2,3,4,5];
   const r = useRouter();
   const options = GetOptions()
   var { qnum } = r.query;
@@ -49,6 +50,13 @@ export default function Quiz() {
       </Head>
       <NavBar></NavBar>
       <Cont>
+        <QuizCont>
+          {scale.map((o,i) => <MindScale
+              scaleNum= {i+1}
+              backgroundColor= {Number(qnum) === i? '#D28A7C' :"#8EAAAC"  }
+              m
+              > </MindScale>)}
+        </QuizCont>
         <ImgDiv path={ques[qnum].i} size="20em"></ImgDiv>
         <HeadText text={ques[qnum].q}></HeadText>
 
@@ -59,12 +67,13 @@ export default function Quiz() {
             <QueButton
               
               button_text={ques[qnum].c[i].txt}
-              onClick={() => r.replace({
+              onClick={() => r.push({
                 pathname: "/quiz/questions",
                 query:{
                   qnum: Number(qnum),
                   click: Number(i)
-                }}, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt))}
+                }
+              }, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt, Number(i)))}
 
                 bgcol= {Number(click) === i ? "#6D8C8E" : "#8EAAAC"}
               
@@ -73,23 +82,25 @@ export default function Quiz() {
           ))
         }
 
-        <ButtCont>
+        <QuizCont>
           {
             Number(qnum) === 4 &&
             ques[qnum].c.map((o, i) =>
-              <ImgDiv size="20%" path={ques[qnum].c[i].ig}
-                onClick={() => {
-                  StoreAn(qnum, ques[qnum].c[i].num,
-                    ques[qnum].c[i].txt)
-                }}>
+              <ImgDiv size="100pt" path={Number(click) === i? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
+                onClick={() => r.replace({
+                  pathname: "/quiz/questions",
+                  query:{
+                    qnum: Number(qnum),
+                    click: Number(i)
+                  }}, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt, Number(i)))}>
               </ImgDiv>)
           }
-        </ButtCont>
+        </QuizCont>
         
 
 
 
-        <ButtCont>
+        <QuizCont>
           <SmallButton button_text="Back" onClick={() => r.replace({
             pathname: "/quiz/questions",
             query: {
@@ -118,7 +129,7 @@ export default function Quiz() {
           </SmallButton>
         }
 
-        </ButtCont>
+        </QuizCont>
       </Cont>
 
 

@@ -17,7 +17,8 @@ export const ques = [
     ],
     i: "/brownyexplain.svg" , 
     a: 0,
-    selected: ""
+    selected: "",
+    ic: 0
     },
     
     {
@@ -35,7 +36,8 @@ export const ques = [
         ],
         i: "/brownyrun.svg",
         a: 0,
-        selected: ""
+        selected: "",
+        ic: 0
         },
 
         {
@@ -58,7 +60,8 @@ export const ques = [
             ],
             i: "/brownyEating.svg",
             a: 0,
-            selected: ""
+            selected: "",
+            ic: 0
             },
 
         {
@@ -76,7 +79,8 @@ export const ques = [
         ],
         i: "/brownysleep.svg",
         a: 0,
-        selected: ""
+        selected: "",
+        ic: 0
         },
 
         {
@@ -86,41 +90,49 @@ export const ques = [
                 {
                 txt: "Great",
                 num: 2,
-                ig: "/superHappy.svg"
+                ig: "/great.png",
+                sel:"/greatsel.png"
                 },
 
                 {
                 txt: "Good",
                 num: 1,
-                ig: "/happy.svg"
+                ig: "/happy.png",
+                sel:"/happysel.png"
                 },
         
                 {
                     txt: "Okay",
                     num: 0,
-                    ig:"/neutral.svg"
+                    ig:"/neutral.png",
+                    sel:"/neutralsel.png"
                 },
                 
                 {
                 txt: "Bad",
                 num: -1,
-                ig:"/sad.svg"
+                ig:"/sad.png",
+                sel:"/sadsel.png"
                 },
 
                 {
                 txt: "Awful",
                 num: -2,
-                ig: "/superSad.svg"
+                ig: "/awful.png",
+                sel:"/awfulsel.png"
                 },
             ],
             i: "/brownyexplain.svg" , 
             a: 0,
-            selected: ""
+            selected: "",
+            ic: 0
             },
 
 ]
 
 export var options = []
+
+export var optionnum = []
 
 var value = []
 
@@ -144,14 +156,17 @@ export function addMind(){
 
 export function GetOptions(){
 	return options;
+    
 }
 
-export function StoreAn(qno,mnum,txt){
+export function StoreAn(qno,mnum,txt, qIndex){
     ques[qno].a = mnum
     ques[qno].selected = txt
+    ques[qno].ic = qIndex
     value[qno] = ques[qno].a
     options[qno] = ques[qno].selected
-    console.log(value, options)
+    optionnum[qno] = ques[qno].ic
+    console.log(value, options, optionnum)
   }
 
 

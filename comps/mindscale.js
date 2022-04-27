@@ -24,7 +24,7 @@ color:#F6FEFF;
 text-align: center;
 vertical-align: middle;
 Font-family: 'DM Sans';
-margin-bottom: 4rem;
+margin-top: 2em;
 animation: 1.5s ${pulseAnimation} infinite ;
 `
 

@@ -10,15 +10,9 @@ export const speech = [
 
   export const message = speech[num]
 
-  // export const [shirt, setShirt] = [
 
-  //   useState(true)
-  // ]
+
 
   export var num = 0;
 
-  export function CleanUp(){
-    //if (shirt === false)
-    num ++
 
-  }
