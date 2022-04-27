@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const LiItem = styled.li`
-font-size: 14pt;
+font-size: 16   pt;
 
 color: #6F5F5E;
 font-family: 'Dm Sans';

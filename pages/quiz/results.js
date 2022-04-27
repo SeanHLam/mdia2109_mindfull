@@ -33,6 +33,10 @@ justify-content: center;
 display: flex;
 `
 
+const Divider = styled.div`
+margin: 1em;
+
+`
 
 
 export default function Quiz() {
@@ -92,12 +96,14 @@ export default function Quiz() {
           {Results.map((o,i)=>
           
           <Stat
-          point1={Results[i].choices[scale[i]].text1}
-          point2={Results[i].choices[scale[i]].text2}
+          point1={Results[i].choices[optionnum[i+1]].text1}
+          point2={Results[i].choices[optionnum[i+1]].text2}
           statIcon={Results[i].icon}
           >
           </Stat>)}
 
+          <Divider></Divider>
+          <Divider></Divider>
           {ButtLinks.map((o,i)=>
           
           <LargeButton
@@ -108,7 +114,7 @@ export default function Quiz() {
           
         </Cont>
 
-        <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv>
+        {/* <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv> */}
 
         
       </main>
