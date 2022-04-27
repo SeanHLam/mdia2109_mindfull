@@ -77,7 +77,9 @@ export default function Quiz() {
             m
             > </MindScale>)}
           </ScaleCont>
+
           <ImgDiv path='/scaleArrow.png' size='28rem' marginLeft="0" marginRight="0" padding="0" marginBottom-="-1em" ></ImgDiv>
+
 
           <HeadText text={`Your mindfulness score: ${mindScore} / 5`}  color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
 

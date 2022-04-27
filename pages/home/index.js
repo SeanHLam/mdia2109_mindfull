@@ -32,8 +32,8 @@ export default function Home() {
       <ImgDiv path='/browny1.svg' size='20em'></ImgDiv>
       <HeadText text="How are you today?"></HeadText>
       <LargeButton button_text="MEASURE YOUR MINDFULLNESS" next="quiz"></LargeButton>
-      <ImgDiv path='/clouds.svg' size='40em'></ImgDiv>
-      <ImgDiv path='/leaves.gif' placement='absolute' size='60em' opacity='40%'></ImgDiv>
+      <ImgDiv path='/clouds.svg' size='25em'></ImgDiv>
+      <ImgDiv path='/leaves.gif' placement='absolute' size='25em' opacity='40%'></ImgDiv>
       </Cont>
     
       
