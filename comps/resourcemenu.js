@@ -84,6 +84,7 @@ export function ResourceMenu(){
     background-color:${background};
     padding: 5pt 15pt 5pt 15pt;
     cursor:pointer;
+    margin-bottom: 45px;
     `
     const rightbutton = {
     borderRadius:"0px 25px 0px 0px",
