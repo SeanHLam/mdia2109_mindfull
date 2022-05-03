@@ -61,7 +61,7 @@ export default function Activities() {
             apple: apple,
             book: book
           }
-        })
+        }, null, {scroll:false})
       } 
       display = {shirt=== "true" && "none"}
       >
@@ -82,9 +82,9 @@ export default function Activities() {
           shirt: shirt,
           book: book,
         }
-      })
+      }, null, {scroll:false})
     } 
-    display = {apple=== "true" && "none"}
+    display = {apple === "true" && "none"}
     >
         
       </ImgDiv>
@@ -104,7 +104,7 @@ export default function Activities() {
           apple: apple,
           book: true
         }
-      })
+      }, null, {scroll:false})
     } 
     display = {book=== "true" && "none"}
     >
@@ -121,10 +121,13 @@ export default function Activities() {
       <Message onClick={() => r.push({
         pathname: "/activities",
         query: {
-          num: Number(num) === 0  ? Number(num) + 1 : Number(num) 
+          num: Number(num) === 0  ? Number(num) + 1 : Number(num), 
+          shirt: shirt,
+          apple: apple,
+          book: book
         }
 
-      })} path={speech[num]}></Message>
+      }, null, {scroll:false})} path={speech[num]}></Message>
       
       {
           Number(num) === 4 &&

@@ -58,7 +58,7 @@ export default function Instruction() {
               query: {
                 snum: (Number(snum) - 1 <= 0) ? 0 : Number(snum) - 1
               }
-            })}>
+            }, null, {scroll:false})}>
             </SmallButton>
           }
 
@@ -68,7 +68,7 @@ export default function Instruction() {
               query: {
                 snum: (Number(snum) - 1 <= 0) ? 0 : Number(snum) - 1
               }
-            })}>
+            }, null, {scroll:false})}>
             </SmallButton>
           }
 
@@ -80,7 +80,7 @@ export default function Instruction() {
               query: {
                 snum: (Number(snum) + 1 >= speech.length) ? speech.length - 1 : Number(snum) + 1
               }
-            })}>
+            }, null, {scroll:false})}>
             </SmallButton>
           }
 
@@ -88,7 +88,7 @@ export default function Instruction() {
             <SmallButton button_text="Let's start" onClick={() => r.push({
               pathname: "/quiz/questions",
 
-            })}>
+            }, null, {scroll:false})}>
             </SmallButton>
           }
 

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components';
 import { HeadText } from "../../comps/header";
 import { ParaText } from "../../comps/body"
-import { ques, StoreAn, GetOptions, addMind} from "../../data/questiondata"
+import { ques, StoreAn, GetOptions, addMind } from "../../data/questiondata"
 import { ResourceMenu, ResourceBox } from "../../comps/resourcemenu";
 import { numberArr, linkArr } from "../../data/resourcedata";
 import { useState } from 'react';
@@ -30,14 +30,28 @@ flex-direction: row;
 `
 
 export default function Quiz() {
-  const scale = [1,2,3,4,5];
+  const scale = [1, 2, 3, 4, 5];
   const r = useRouter();
   const options = GetOptions()
   var { qnum } = r.query;
-  var {click} = r.query
+  var { click } = r.query
 
   if (qnum === undefined) {
     qnum = 0;
+  }
+
+  const HandleQue = (o, i) => {
+
+    StoreAn(qnum, o.num, o.txt, Number(i)),
+
+      r.push({
+        pathname: "/quiz/questions",
+        query: {
+          qnum: Number(qnum),
+          click: Number(i)
+        }
+      }, null, { scroll: false })
+
   }
 
 
@@ -51,11 +65,11 @@ export default function Quiz() {
       <NavBar></NavBar>
       <Cont>
         <QuizCont>
-          {scale.map((o,i) => <MindScale
-              scaleNum= {i+1}
-              backgroundColor= {Number(qnum) === i? '#D28A7C' :"#8EAAAC"  }
-              m
-              > </MindScale>)}
+          {scale.map((o, i) => <MindScale
+            scaleNum={i + 1}
+            backgroundColor={Number(qnum) === i ? '#D28A7C' : "#8EAAAC"}
+            m
+          > </MindScale>)}
         </QuizCont>
         <ImgDiv path={ques[qnum].i} size="20em"></ImgDiv>
         <HeadText text={ques[qnum].q}></HeadText>
@@ -63,21 +77,20 @@ export default function Quiz() {
 
         {
           Number(qnum) < 4 &&
+
           ques[qnum].c.map((o, i) => (
             <QueButton
-              
-              button_text={ques[qnum].c[i].txt}
-              onClick={() => r.push({
-                pathname: "/quiz/questions",
-                query:{
-                  qnum: Number(qnum),
-                  click: Number(i)
-                }
-              }, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt, Number(i)))}
 
-                bgcol= {Number(click) === i ? "#6D8C8E" : "#8EAAAC"}
-              
-              >
+              button_text={o.txt}
+              onClick={() =>
+                HandleQue(o, i)
+                //()=>HandleQue(o,i)
+                //const HandleQue = (o, i) =>{ StoreAn(...); r.push(...)}
+              }
+
+              bgcol={Number(click) === i ? "#6D8C8E" : "#8EAAAC"}
+
+            >
             </QueButton>
           ))
         }
@@ -86,17 +99,12 @@ export default function Quiz() {
           {
             Number(qnum) === 4 &&
             ques[qnum].c.map((o, i) =>
-              <ImgDiv size="100pt" path={Number(click) === i? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
-                onClick={() => r.replace({
-                  pathname: "/quiz/questions",
-                  query:{
-                    qnum: Number(qnum),
-                    click: Number(i)
-                  }}, StoreAn(qnum, ques[qnum].c[i].num, ques[qnum].c[i].txt, Number(i)))}>
+              <ImgDiv size="100pt" path={Number(click) === i ? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
+                onClick={() => HandleQue(o, i)}>
               </ImgDiv>)
           }
         </QuizCont>
-        
+
 
 
 
@@ -106,28 +114,28 @@ export default function Quiz() {
             query: {
               qnum: (Number(qnum) - 1 <= 0) ? 0 : Number(qnum) - 1
             }
-          })}>
+          }, null, {scroll:false})}>
           </SmallButton>
-          
-          { Number(qnum) < 4 &&
-          <SmallButton onClick={() => r.replace({
-            pathname: "/quiz/questions",
-            query: {
-              qnum:  options[qnum]!= null ? (Number(qnum) + 1 >= ques.length) ? ques.length - 1 : Number(qnum) + 1 : Number(qnum)
-            }
-          })}>
-          </SmallButton>
-        }
 
-        { Number(qnum) === 4 &&
-          <SmallButton button_text="Finish" onClick={() => 
+          {Number(qnum) < 4 &&
+            <SmallButton onClick={() => r.replace({
+              pathname: "/quiz/questions",
+              query: {
+                qnum: options[qnum] != null ? (Number(qnum) + 1 >= ques.length) ? ques.length - 1 : Number(qnum) + 1 : Number(qnum)
+              }
+            }, null, {scroll:false})}>
+            </SmallButton>
+          }
+
+          {Number(qnum) === 4 &&
+            <SmallButton button_text="Finish" onClick={() =>
               options[qnum] != null &&
               r.push({
-            pathname: "/quiz/results" 
- 
-          },addMind())}>
-          </SmallButton>
-        }
+                pathname: "/quiz/results"
+
+              }, addMind())}>
+            </SmallButton>
+          }
 
         </QuizCont>
       </Cont>
