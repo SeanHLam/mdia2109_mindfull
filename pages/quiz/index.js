@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { NavBar } from "../../comps/navbar";
 import { LargeButton } from "../../comps/largebutton";
 import { SmallButton } from "../../comps/smallbutton";
+import { BackButton } from "../../comps/backbutton";
 import { ImgDiv } from '../../comps/images';
 import { SpeechBubble } from '../../comps/speechbubble';
 
@@ -53,23 +54,23 @@ export default function Instruction() {
 
         <ButtCont>
           {Number(snum) === 0 &&
-            <SmallButton button_text="Back" onClick={() => r.push({
+            <BackButton button_text="Back" onClick={() => r.push({
               pathname: "/home/",
               query: {
                 snum: (Number(snum) - 1 <= 0) ? 0 : Number(snum) - 1
               }
             }, null, {scroll:false})}>
-            </SmallButton>
+            </BackButton>
           }
 
           {Number(snum) > 0 &&
-            <SmallButton button_text="Back" onClick={() => r.push({
+            <BackButton button_text="Back" onClick={() => r.push({
               pathname: "/quiz/",
               query: {
                 snum: (Number(snum) - 1 <= 0) ? 0 : Number(snum) - 1
               }
             }, null, {scroll:false})}>
-            </SmallButton>
+            </BackButton>
           }
 
 
