@@ -28,7 +28,7 @@ color: #F6FEFF;
 border-radius: 50%;
 text-align: center;
 vertical-align: middle;
-animation: 1s ${bounceAnimation} infinite alternate;
+// animation: 1s ${bounceAnimation} infinite alternate;
  
 
 `
