@@ -11,22 +11,41 @@ const StatCont = styled.div`
 display:flex;
 flex-direction:row;
 justify-content: left;
-margin 1em;
+margin: 1em;
 `
-
+;
 
 
 const StatList  = styled.ul`
 margin: 0;
+
 `
+;
 const ListItem = styled.li`
-font-size: 14pt;
+font-size: 12pt;
 color: #6F5F5E;
 font-family: 'Dm Sans';
 text-align: left;
-white-space: pre-line;
+// white-space: pre-line;
+`
+;
+
+const IconCont = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: left;
+width: 30pt;
 `
 
+const AdviceCont = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+width: auto;
+
+`
 
 export function Stat({
     point1="sample",
@@ -35,11 +54,15 @@ export function Stat({
 
 }){
     return <StatCont>
-        <FontAwesomeIcon icon={statIcon} size="3x" color="#D28A7C"></FontAwesomeIcon>
+        <IconCont>
+        <FontAwesomeIcon icon={statIcon} size="xl" color="#D28A7C"></FontAwesomeIcon>
+        </IconCont>
+        <AdviceCont>
         <StatList>
             <ListItem>{point1}</ListItem>
             <ListItem>{point2}</ListItem>
         </StatList>
+        </AdviceCont>
 
         
     </StatCont>

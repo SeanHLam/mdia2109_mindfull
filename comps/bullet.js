@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 
 const LiItem = styled.li`
-font-size: 16   pt;
-
+font-size: 12pt;
 color: #6F5F5E;
 font-family: 'Dm Sans';
-white-space: pre-line;
+// white-space: pre-line;
 `
+;
 
 export function Bullet
     ({ text = "text sample",
