@@ -38,9 +38,16 @@ margin: 1em;
 
 `
 
+const ResultCont = styled.div`
+width: 20rem;
+height:32rem;
+border: solid 3px #8EAAAC; 
+border-radius: 8pt;
+`
+
 
 export default function Quiz() {
-  const scale = [0,1,1,2,3];
+  const scale = [0, 1, 1, 2, 3];
   return (
     <div>
       <Head>
@@ -65,58 +72,59 @@ export default function Quiz() {
 
 
           <ul>
-            {Summary.map((o,i)=>
-            
-            <Bullet
-              text={Summary[i].option[optionnum[i]].txt}
-            >
-            </Bullet>)}
+            {Summary.map((o, i) =>
+
+              <Bullet
+                text={Summary[i].option[optionnum[i]].txt}
+              >
+              </Bullet>)}
           </ul>
 
-          
+
           <ScaleCont>
-            {scale.map((o,i) => <MindScale
-            scaleNum= {i+1}
-            backgroundColor= {mindScore === i+1 ? '#D28A7C' :"#8EAAAC"  }
-            m
+            {scale.map((o, i) => <MindScale
+              scaleNum={i + 1}
+              backgroundColor={mindScore === i + 1 ? '#D28A7C' : "#8EAAAC"}
+              m
             > </MindScale>)}
           </ScaleCont>
 
           <ImgDiv path='/scaleArrow.png' size='28rem' marginLeft="0" marginRight="0" padding="0" marginBottom-="-1em" ></ImgDiv>
 
 
-          <HeadText text={`Your mindfulness score: ${mindScore} / 5`}  color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
+          <HeadText text={`Your mindfulness score: ${mindScore} / 5`} color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
 
           <Arrow></Arrow>
 
           <ImgDiv path='/brownyAdvice.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
 
 
+          <ResultCont>
+            {Results.map((o, i) =>
 
-          {Results.map((o,i)=>
-          
-          <Stat
-          point1={Results[i].choices[optionnum[i+1]].text1}
-          point2={Results[i].choices[optionnum[i+1]].text2}
-          statIcon={Results[i].icon}
-          >
-          </Stat>)}
+              <Stat
+                point1={Results[i].choices[optionnum[i + 1]].text1}
+                point2={Results[i].choices[optionnum[i + 1]].text2}
+                statIcon={Results[i].icon}
+              >
+              </Stat>)}
+          </ResultCont>
 
           <Divider></Divider>
           <Divider></Divider>
-          {ButtLinks.map((o,i)=>
-          
-          <LargeButton
-          button_text={ButtLinks[i].name}
-          next={ButtLinks[i].path}
-          >
-          </LargeButton>)}
-          
+          {ButtLinks.map((o, i) =>
+
+            <LargeButton
+              button_text={ButtLinks[i].name}
+              next={ButtLinks[i].path}
+            >
+            </LargeButton>)}
+
         </Cont>
 
         {/* <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv> */}
 
-        
+
       </main>
 
 

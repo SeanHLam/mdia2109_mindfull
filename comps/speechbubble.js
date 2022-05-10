@@ -6,14 +6,14 @@ margin: 2rem;
 width: 250pt;
 height: 150pt;
 border-radius: 8pt;
-font-size: 18pt;
+font-size: 15pt;
 color:#F6FEFF;
 text-align: left;
 padding: 1rem;
 vertical-align: middle;
 background-color: #94A9AC;
-line-height: 40pt; 
-font-family: 'Patrick Hand';
+line-height: 30pt; 
+font-family: 'DM Sans';
 
 &:after {
   content: '';
