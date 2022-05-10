@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPersonWalking, faUtensils, faBed, faCloud } from '@fortawesome/free-solid-svg-icons'
+import { faPersonWalking, faHamburger, faMoon, faSeedling, faBasketball } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -83,7 +83,7 @@ export const Summary = [
 ]
 
 export const Results = [
-   {icon: faPersonWalking,
+   {icon: faBasketball,
       choices:[
          {
             text1: `You are doing very well. Keep it going!`,
@@ -96,7 +96,7 @@ export const Results = [
          },
       ] },
 
-      {icon: faUtensils,
+      {icon: faHamburger,
          choices:[
             {
                text1: `Overeating can be a symptom of stress`,
@@ -116,7 +116,7 @@ export const Results = [
 
          ] },
 
-         {icon: faBed,
+         {icon: faMoon,
             choices:[
                {
                   text1: `You're sleeping a healthy amount!`,
@@ -129,7 +129,7 @@ export const Results = [
                },
             ] },
 
-            {icon: faCloud,
+            {icon: faSeedling,
                choices:[
                   {
                      text1: `We're glad to see you happy!`,

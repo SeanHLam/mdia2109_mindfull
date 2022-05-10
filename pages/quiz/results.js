@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPersonWalking, faUtensils, faBed, faCloud } from '@fortawesome/free-solid-svg-icons'
+import { faPersonWalking, faUtensils, faMoon, faCloud } from '@fortawesome/free-solid-svg-icons'
 import { HeadText } from "../../comps/header";
 import { ParaText } from "../../comps/body"
 import { ques, StoreAn, GetOptions, addMind, mindScore, options, optionnum } from "../../data/questiondata"
@@ -40,7 +40,7 @@ margin: 1em;
 
 const ResultCont = styled.div`
 width: 20rem;
-height:32rem;
+height:fit-content;
 border: solid 3px #8EAAAC; 
 border-radius: 8pt;
 `
