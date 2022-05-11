@@ -16,6 +16,7 @@ import {ques} from "../data/questiondata"
 
 import {SpeechBubble} from "../comps/speechbubble";
 import { Bullet } from '../comps/bullet';
+import { BackButton } from '../comps/backbutton';
 
 
 <Head>
@@ -75,6 +76,7 @@ export default function Test(){
             <Arrow></Arrow>
             <SpeechBubble></SpeechBubble>
             <MindScale></MindScale>
+            <BackButton></BackButton>
           
           
         <ul>

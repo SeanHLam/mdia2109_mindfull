@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { NavBar } from "../../comps/navbar";
 import { LargeButton, QueButton } from "../../comps/largebutton";
 import { SmallButton } from "../../comps/smallbutton";
+import { BackButton } from "../../comps/backbutton";
 import Router, { useRouter } from "next/router";
 import { ImgDiv } from '../../comps/images';
 import { MindScale } from "../../comps/mindscale";
@@ -109,13 +110,13 @@ export default function Quiz() {
 
 
         <QuizCont>
-          <SmallButton button_text="Back" onClick={() => r.replace({
+          <BackButton button_text="Back" onClick={() => r.replace({
             pathname: "/quiz/questions",
             query: {
               qnum: (Number(qnum) - 1 <= 0) ? 0 : Number(qnum) - 1
             }
           }, null, {scroll:false})}>
-          </SmallButton>
+          </BackButton>
 
           {Number(qnum) < 4 &&
             <SmallButton onClick={() => r.replace({
