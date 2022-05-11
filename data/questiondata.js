@@ -15,7 +15,7 @@ export const ques = [
         num: 0,
         }
     ],
-    i: "/brownyexplain.svg" , 
+    i: "/brownyyoung.png" , 
     a: 0,
     selected: "",
     ic: 0
