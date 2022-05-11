@@ -136,7 +136,9 @@ export var optionnum = []
 
 var value = []
 
-export var mindScore = 0
+export var mindScore = 3
+
+var test = 3
 
 export function addMind(){
     for(var i = 0; i < value.length; i++){
@@ -147,12 +149,13 @@ export function addMind(){
                 mindScore = 5
             }
 
-            if(mindScore > 5){
-                mindScore = 5
+            if(mindScore < 1){
+                mindScore = 1
             }
 
             }
         }
+        console.log(mindScore)
     }
 
 
@@ -170,7 +173,19 @@ export function StoreAn(qno,mnum,txt, qIndex){
     value[qno] = ques[qno].a
     options[qno] = ques[qno].selected
     optionnum[qno] = ques[qno].ic
-    console.log(value, options, optionnum)
+    test += value[qno]
+
+    if(test > 5){
+        test = 5
+    }
+
+    if(test < 1){
+        test = 1
+    }
+    console.log(value, options, optionnum, test)
+     
+
+
   }
 
 
