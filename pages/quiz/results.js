@@ -45,6 +45,11 @@ border: solid 3px #8EAAAC;
 border-radius: 8pt;
 `
 
+const SummCont = styled.ul`
+border: solid 3px #8EAAAC; 
+border-radius: 8pt;
+`
+
 
 export default function Quiz() {
   const scale = [0, 1, 1, 2, 3];
@@ -64,23 +69,7 @@ export default function Quiz() {
 
         <Cont>
 
-         
-
-          <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
-
-          {/* <HeadText text="Summary" color="#F6FEFF" placement="relative" marginTop="4rem"></HeadText> */}
-
-
-          <ul>
-            {Summary.map((o, i) =>
-
-              <Bullet
-                text={Summary[i].option[optionnum[i]].txt}
-              >
-              </Bullet>)}
-          </ul>
-
-
+          <HeadText text={`Your mindfulness score: ${mindScore} / 5`} color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
           <ScaleCont>
             {scale.map((o, i) => <MindScale
               scaleNum={i + 1}
@@ -92,7 +81,29 @@ export default function Quiz() {
           <ImgDiv path='/scaleArrow.png' size='28rem' marginLeft="0" marginRight="0" padding="0" marginBottom-="-1em" ></ImgDiv>
 
 
-          <HeadText text={`Your mindfulness score: ${mindScore} / 5`} color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
+
+
+
+
+
+
+
+
+          <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+
+
+
+          <SummCont>
+            {Summary.map((o, i) =>
+
+              <Bullet
+                text={Summary[i].option[optionnum[i]].txt}
+              >
+              </Bullet>)}
+          </SummCont>
+
+
+
 
           <Arrow></Arrow>
 
@@ -112,8 +123,9 @@ export default function Quiz() {
 
           <Divider></Divider>
           <Divider></Divider>
-          {ButtLinks.map((o, i) =>
 
+          <ImgDiv path='/related.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+          {ButtLinks.map((o, i) =>
             <LargeButton
               button_text={ButtLinks[i].name}
               next={ButtLinks[i].path}

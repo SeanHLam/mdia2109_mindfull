@@ -6,6 +6,7 @@ const LiItem = styled.li`
 font-size: 12pt;
 color: #6F5F5E;
 font-family: 'Dm Sans';
+list-style-type: none;
 // white-space: pre-line;
 `
 ;
@@ -16,8 +17,9 @@ export function Bullet
         placement = "static",
         marginRight = "2em",
         marginLeft = "auto",
-        marginTop = "auto",
+        marginTop = "1em",
         marginBottom = "1em",
+        
 
     }) {
     return <LiItem

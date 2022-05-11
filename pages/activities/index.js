@@ -24,11 +24,7 @@ z-index: auto;
 `
 
 export default function Activities() {
-  const r = useRouter();
-  var { num } = r.query;
-  var {shirt} = r.query;
-  var {apple} = r.query;
-  var {book} = r.query;
+
 
  
   
@@ -45,95 +41,8 @@ export default function Activities() {
       </main>
 
       <Cont>
-      <ImgDiv path='/shirt.png' 
-      size='9em' 
-      placement='absolute' 
-      zIndex='1' 
-      marginLeft='-6em' 
-      top='25em'
-      onClick={() => 
-        
-        r.push({
-          pathname: "/activities",
-          query: {
-            num: Number(num) >= 1  ? Number(num) + 1 : Number(num),
-            shirt: true,
-            apple: apple,
-            book: book
-          }
-        }, null, {scroll:false})
-      } 
-      display = {shirt=== "true" && "none"}
-      >
-      </ImgDiv>
-     
-      <ImgDiv 
-      path='/apple.png' 
-      size='6em' 
-      placement='absolute' 
-      zIndex='1' marginLeft='1em' 
-      top='25em'
-      className={".test"}
-      onClick={() => r.push({
-        pathname: "/activities",
-        query: {
-          num: Number(num) >= 1  ? Number(num) + 1 : Number(num),
-          apple: true,
-          shirt: shirt,
-          book: book,
-        }
-      }, null, {scroll:false})
-    } 
-    display = {apple === "true" && "none"}
-    >
-        
-      </ImgDiv>
-     
-      <ImgDiv 
-      path='/book.png' 
-      size='9em' 
-      placement='absolute' 
-      zIndex='1' 
-      marginLeft='7em' 
-      top='28em'
-      onClick={() => r.push({
-        pathname: "/activities",
-        query: {
-          num: Number(num) >= 1  ? Number(num) + 1 : Number(num),
-          shirt: shirt,
-          apple: apple,
-          book: true
-        }
-      }, null, {scroll:false})
-    } 
-    display = {book=== "true" && "none"}
-    >
-      </ImgDiv>
-      
-      <ImgDiv 
-      path='/activityRoom.png' 
-      size='32em'>
-      </ImgDiv>
-      
-
-
-
-      <Message onClick={() => r.push({
-        pathname: "/activities",
-        query: {
-          num: Number(num) === 0  ? Number(num) + 1 : Number(num), 
-          shirt: shirt,
-          apple: apple,
-          book: book
-        }
-
-      }, null, {scroll:false})} path={speech[num]}></Message>
-      
-      {
-          Number(num) === 4 &&
-          <LargeButton button_text="Take me back home"></LargeButton>
-        }
-      
+      <HeadText text="Activities"></HeadText>
+      <LargeButton button_text="Cleaning your room" next="/activities/cleanup"></LargeButton>
       </Cont>
     
       

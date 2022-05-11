@@ -33,17 +33,19 @@ text-align: left;
 const IconCont = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: flex-start;
+justify-content: center;
 align-items: left;
 width: 30pt;
 `
 
 const AdviceCont = styled.div`
 display: flex;
+margin-bottom: .5em;
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 width: auto;
+list-style-type: none;
 
 `
 
@@ -55,7 +57,7 @@ export function Stat({
 }) {
     return <StatCont>
         <IconCont>
-            <FontAwesomeIcon icon={statIcon} size="xl" color="#D28A7C"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={statIcon} size="2xl" color="#D28A7C"></FontAwesomeIcon>
         </IconCont>
 
         <StatList>
