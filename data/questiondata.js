@@ -155,7 +155,7 @@ export function addMind(){
         }
     }
 
-}
+
 
 
 export function GetOptions(){
