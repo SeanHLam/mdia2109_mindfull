@@ -11,7 +11,7 @@ import { LargeButton, QueButton } from "../../comps/largebutton";
 import { SmallButton } from "../../comps/smallbutton";
 import { BackButton } from "../../comps/backbutton";
 import Router, { useRouter } from "next/router";
-import { ImgDiv } from '../../comps/images';
+import { ImgDiv, ImgQue } from '../../comps/images';
 import { MindScale } from "../../comps/mindscale";
 
 
@@ -68,8 +68,21 @@ export default function Quiz() {
         <QuizCont>
           {scale.map((o, i) => <MindScale
             scaleNum={i + 1}
-            backgroundColor={Number(qnum) === i ? '#D28A7C' : "#8EAAAC"}
-            m
+            // backgroundColor={Number(qnum) === i ? '#D28A7C' : "rgba(0,0,0,0)"}
+            backgroundColor={Number(qnum) === i ? '#D28A7C' : "rgba(0,0,0,0)" } 
+           
+            onClick={() =>
+              //console.log(options[i])
+              r.push({
+                pathname: "/quiz/questions",
+                query: {
+                  qnum: options[i] != null ? Number(i) : Number(qnum),
+                  
+                }
+              }, null, { scroll: false })
+            }
+            
+            
           > </MindScale>)}
         </QuizCont>
         <ImgDiv path={ques[qnum].i} size="20em"></ImgDiv>
@@ -85,8 +98,7 @@ export default function Quiz() {
               button_text={o.txt}
               onClick={() =>
                 HandleQue(o, i)
-                //()=>HandleQue(o,i)
-                //const HandleQue = (o, i) =>{ StoreAn(...); r.push(...)}
+     
               }
 
               bgcol={Number(click) === i ? "#6D8C8E" : "#8EAAAC"}
@@ -100,9 +112,9 @@ export default function Quiz() {
           {
             Number(qnum) === 4 &&
             ques[qnum].c.map((o, i) =>
-              <ImgDiv size="100pt" path={Number(click) === i ? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
+              <ImgQue size="100pt" path={Number(click) === i ? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
                 onClick={() => HandleQue(o, i)}>
-              </ImgDiv>)
+              </ImgQue>)
           }
         </QuizCont>
 
@@ -111,7 +123,7 @@ export default function Quiz() {
 
         <QuizCont>
           <BackButton button_text="Back" onClick={() => r.replace({
-            pathname: "/quiz/questions",
+            pathname:Number(qnum) > 0 ? "/quiz/questions" : "/quiz" ,
             query: {
               qnum: (Number(qnum) - 1 <= 0) ? 0 : Number(qnum) - 1
             }
