@@ -49,7 +49,7 @@ export default function Instruction() {
         {/* <SpeechBubble></SpeechBubble> */}
         <SpeechBubble speech_text={speech[snum]}></SpeechBubble>
 
-        <ImgDiv path='/brownyexplain.svg' size='25 rem'></ImgDiv>
+        <ImgDiv path='/browny.gif' size='25 rem'></ImgDiv>
 
 
         <ButtCont>
