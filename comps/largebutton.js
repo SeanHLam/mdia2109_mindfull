@@ -46,6 +46,7 @@ font-family: 'Oswald';
 user-select: none;
 &:hover{
     background-color: #6D8C8E;
+    animation: 1s ${bounceAnimation} ;
 
 `
 const QueCont = styled.div`

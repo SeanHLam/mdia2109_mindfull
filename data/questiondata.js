@@ -142,22 +142,16 @@ export function addMind(){
     for(var i = 0; i < value.length; i++){
         if(value[i] != null){
             mindScore += value[i]
+
             if(mindScore > 5){
                 mindScore = 5
             }
-     
             if(mindScore < 1){
                 mindScore = 1
             }
         }
     }
-    if(mindScore > 5){
-        mindScore = 5
-    }
-    if(mindScore < 1){
-        mindScore = 1
-    }
-    console.log(mindScore)
+
 }
 
 

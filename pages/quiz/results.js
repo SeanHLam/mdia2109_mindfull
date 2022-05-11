@@ -64,7 +64,7 @@ export default function Quiz() {
 
         <Cont>
 
-          <ImgDiv path='/leaves.gif' size='30rem' placement='absolute' opacity='40%'></ImgDiv>
+         
 
           <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
 

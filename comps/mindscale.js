@@ -25,6 +25,7 @@ text-align: center;
 vertical-align: middle;
 Font-family: 'DM Sans';
 margin-top: 2em;
+border: 1pt solid #8EAAAC;
 animation: 1.5s ${pulseAnimation} infinite ;
 `
 
@@ -32,13 +33,15 @@ animation: 1.5s ${pulseAnimation} infinite ;
 export function MindScale ({
     scaleNum="1",
     backgroundColor = "#8EAAAC",
+    onClick=()=>{},
 
 
 }){
     return <Scale 
+    onClick={onClick}
     src={scaleNum}
-    style={{ backgroundColor: backgroundColor 
-    }}
+    style={{ backgroundColor: backgroundColor, animation:null}
+}
     >{scaleNum}</Scale>
 }
 
