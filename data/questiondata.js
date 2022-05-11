@@ -146,8 +146,11 @@ export function addMind(){
             if(mindScore > 5){
                 mindScore = 5
             }
-            if(mindScore < 1){
-                mindScore = 1
+
+            if(mindScore > 5){
+                mindScore = 5
+            }
+
             }
         }
     }
