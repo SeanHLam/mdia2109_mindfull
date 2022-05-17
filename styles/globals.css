@@ -40,7 +40,7 @@ ul{
 @keyframes floatInFromTop {
   from {
     opacity: 0%;
-    transform: translateY(-40px);
+    transform: translateY(-10px);
   }
 
   to {
@@ -48,9 +48,22 @@ ul{
     transform: translateY(0);
   }
 }
-@keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(5px, 15px); }
-  100%   { transform: translate(0, -0px); } 
+
+.slider_image{
+  width:110px;
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  align-items:center;
+  padding-top:15pt;
+  animation: floatInFromTop 0.5s linear forwards;
 }
 
+.slider_text{
+  text-align:center;
+  font-family: 'Patrick Hand';
+  font-size: 20px;
+  color:#6F5F5E;
+  padding-top: 5pt;
+  animation: floatInFromTop 0.5s linear forwards;
+}
