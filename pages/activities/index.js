@@ -42,6 +42,7 @@ export default function Activities() {
 
       <Cont>
       <HeadText text="Activities"></HeadText>
+      <ImgDiv path='/broom2.gif' size='15em'></ImgDiv>
       <LargeButton button_text="Cleaning your room" next="/activities/cleanup"></LargeButton>
       </Cont>
     
