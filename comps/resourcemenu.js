@@ -5,7 +5,7 @@ import { faPhone, faLink, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Resource from "../pages/resource";
 import { questions, option1, option2 } from "../data/questiondata";
-
+import { ImgDiv } from './images';
 
 
 
@@ -33,19 +33,35 @@ border-radius: 26px;
 box-sizing:content-box !important;
 overflow-y:auto;
 overflow-x:hidden;
+z-index:5;
 `
 
 const ResourceBox = styled.div`
 display:flex;
 justify-content:center;
-padding:15px;
+padding-top: 120px;
+margin-bottom: 75px;
 `
 const ListBox = styled.div`
 width:230px;
 display:flex;
 justify-content:center;
 `
+const FlowerCont = styled.div`
+position:absolute;
+left:53%;
+top: 470px;
+z-index: 0;
+transform: rotate(25deg);
+`
 
+const TreeCont = styled.div`
+position:absolute;
+right:52%;
+top: 460px;
+z-index: 0;
+transform: rotate(-25deg);
+`
 
 
 export function Item({
@@ -103,19 +119,24 @@ export function ResourceMenu(){
 
 
     return <div>
-    <ResourceBox style={{marginTop:'175px'}}>
+    <ResourceBox>
+            <FlowerCont>
+            <ImgDiv path ='/flower.svg' size= '10em'/>
+            </FlowerCont>
+            <TreeCont>
+            <ImgDiv path ='/tree.svg' size= '10em'/>
+            </TreeCont>
             <ResourceOutline>
 
                 <ToggleButton 
-                onClick={ () => { setFav("number"); ;} } style= {fav === "number" ? {backgroundColor: "#8E6057", boxShadow:"inset 0 0 5px black"} : {backgroundColor: "#D28A7C"}}>
+                onClick={ () => { setFav("number"); ;} } style= {fav === "number" ? {backgroundColor: "#8E6057", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C"}}>
                     <FontAwesomeIcon icon={faPhone} size="1x" color= {fav === "number" ? "#D28A7C" :  "#8E6057"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                     NUMBERS 
                 </ToggleButton>
-            
-                  
+                
                 <ToggleButton
                 style= {rightbutton}
-                onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#8E6057",   borderRadius:"0px 25px 0px 0px", boxShadow:"inset 0 0 5px black"} : {backgroundColor: "#D28A7C",   borderRadius:"0px 25px 0px 0px",}}>
+                onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#8E6057",   borderRadius:"0px 25px 0px 0px", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C",   borderRadius:"0px 25px 0px 0px",}}>
                     <FontAwesomeIcon icon={faLink} size="1x" color= {fav === "link" ? "#D28A7C" :  "#8E6057"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                      LINKS 
                 </ToggleButton>
