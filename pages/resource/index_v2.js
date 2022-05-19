@@ -85,7 +85,7 @@ export default function Resource() {
 
         <TapMe>
            {
-           show?<h1 style={{fontSize: "36px"}}> Tap me!</h1>:<h1 style={{marginLeft: "5px", marginTop:"100px"}}> It's important to reach out!</h1>
+           show?<h1 style={{fontSize: "36px"}}> Tap me!</h1>:<h1 style={{marginLeft: "5px", marginTop:"100px"}}> It&apos;s important to reach out!</h1>
            }
         </TapMe>
       </PhoneCont>

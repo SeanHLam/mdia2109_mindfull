@@ -66,7 +66,7 @@ export default function Quiz() {
       <NavBar></NavBar>
       <Cont>
         <QuizCont>
-          {scale.map((o, i) => <MindScale
+          {scale.map((o, i) => <MindScale key={scale}
             scaleNum={i + 1}
             // backgroundColor={Number(qnum) === i ? '#D28A7C' : "rgba(0,0,0,0)"}
             backgroundColor={Number(qnum) === i ? '#D28A7C' : "rgba(0,0,0,0)" } 
@@ -93,7 +93,7 @@ export default function Quiz() {
           Number(qnum) < 4 &&
 
           ques[qnum].c.map((o, i) => (
-            <QueButton
+            <QueButton key={ques.length}
 
               button_text={o.txt}
               onClick={() =>
@@ -112,7 +112,8 @@ export default function Quiz() {
           {
             Number(qnum) === 4 &&
             ques[qnum].c.map((o, i) =>
-              <ImgQue size="100pt" path={Number(click) === i ? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
+              <ImgQue key={ques.que}
+              size="100pt" path={Number(click) === i ? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
                 onClick={() => HandleQue(o, i)}>
               </ImgQue>)
           }
