@@ -8,6 +8,7 @@ text-align: center;
 color: #6F5F5E;
 font-family: 'Dm Sans';
 white-space: pre-line;
+transition: opacity 1s;
 `
 
 export function ParaText
@@ -20,9 +21,13 @@ export function ParaText
         marginBottom = "auto",
         fontSize = "14pt",
         textAlign = "center",
+
+        opacity="100"
+
     }) {
     return <TextItem
         src={text}
-        style={{color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom, fontSize: fontSize, textAlign: textAlign }}
+        style={{ opacity:opacity,color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom, fontSize: fontSize, textAlign: textAlign }}
+
     >{text}</TextItem>
 }

@@ -3,6 +3,15 @@ import { faPersonWalking, faHamburger, faMoon, faSeedling, faBasketball } from '
 
 
 
+
+export const Resimg = [
+   "/result1.png",
+   "/result2.png",
+   "/result3.png",
+   "/result4.png",
+   "/result5.png",
+]
+
 export const Summary = [
    {
       option:[
