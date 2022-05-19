@@ -31,7 +31,9 @@ export default function Home() {
       <Cont>
       <ImgDiv path='/browny1.svg' size='20em'></ImgDiv>
       <HeadText text="How are you today?"></HeadText>
-      <LargeButton button_text="MEASURE YOUR MINDFULLNESS" next="quiz"></LargeButton>
+      <LargeButton button_text="Measure your Mindfullness" next="quiz"></LargeButton>
+      {/* <HeadText text="or"></HeadText> */}
+      <LargeButton button_text="Try the Activities" next="activities"></LargeButton>
       <ImgDiv path='/clouds.svg' size='25em'></ImgDiv>
       <ImgDiv path='/leaves.gif' placement='absolute' size='25em' opacity='40%'></ImgDiv>
       </Cont>
