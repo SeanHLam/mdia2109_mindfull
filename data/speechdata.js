@@ -4,5 +4,6 @@ export const speech = [
                 "Select your answer and press next to go to the next question. You can press back to the last question.",
                 "As a reminder, we're not medical experts! Do not treat this as a diagnosis. Now let’s start!"
 ]
-            
+ 
+
            
