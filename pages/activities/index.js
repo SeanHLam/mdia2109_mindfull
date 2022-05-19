@@ -16,6 +16,16 @@ import { Message } from '../../comps/messagebrowny';
 import { message, speech, CleanUp  } from '../../data/activitydata';
 
 const Cont = styled.div`
+margin-top: 2em;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+z-index: auto;
+`
+
+const Cont2 = styled.div`
+margin-top: 4em;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -41,10 +51,16 @@ export default function Activities() {
       </main>
 
       <Cont>
-      <HeadText text="Activities"></HeadText>
+      <HeadText text="Activity 1"></HeadText>
       <ImgDiv path='/broom2.gif' size='15em'></ImgDiv>
       <LargeButton button_text="Cleaning your room" next="/activities/cleanup"></LargeButton>
       </Cont>
+
+      <Cont2>
+      <HeadText text="Activity 2"></HeadText>
+      <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
+      <LargeButton button_text="Staying hydrated" next="/activities/drinkwater"></LargeButton>
+      </Cont2>
     
       
     </div>
