@@ -21,12 +21,13 @@ export function ParaText
         marginBottom = "auto",
         fontSize = "14pt",
         textAlign = "center",
+
         opacity="100"
 
     }) {
     return <TextItem
         src={text}
         style={{ opacity:opacity,color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom, fontSize: fontSize, textAlign: textAlign }}
+
     >{text}</TextItem>
 }
-
