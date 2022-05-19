@@ -15,7 +15,7 @@ export const ques = [
         num: 0,
         }
     ],
-    i: "/brownyyoung.png" , 
+    i: "/brownyYoung.png" , 
     a: 0,
     selected: "",
     ic: 0
@@ -77,7 +77,7 @@ export const ques = [
             num: -1,
             }
         ],
-        i: "/brownysleep.svg",
+        i: "/brownySleep.svg",
         a: 0,
         selected: "",
         ic: 0
@@ -90,7 +90,7 @@ export const ques = [
                 {
                 txt: "Great",
                 num: 2,
-                ig: "/great.png",
+                ig: "/Great.png",
                 sel:"/greatsel.png"
                 },
 
@@ -132,7 +132,7 @@ export const ques = [
 
 export var options = []
 
-export var optionnum = [1]
+export var optionnum = [1,1,1,1,1]
 
 var value = []
 

@@ -137,7 +137,7 @@ return <NavCont>
             })}
         ></LogoImage>
         
-        <LogoType src="/LogoType.svg"
+        <LogoType src="/logoType.svg"
             onClick={()=>r.push({
             pathname: "/"
             })}
