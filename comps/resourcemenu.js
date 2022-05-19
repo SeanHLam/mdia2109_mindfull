@@ -28,7 +28,7 @@ const ResourceOutline = styled.div`
 width: 230pt;
 height: 250pt;
 background-color:#DAE5E7;
-border: 1px solid black;
+border: 3px solid #6F5F5E;
 border-radius: 26px;
 box-sizing:content-box !important;
 overflow-y:auto;
@@ -95,7 +95,7 @@ export function ResourceMenu(){
     border-color: black;
     font-size:16pt;
     width: 115pt;
-    border-radius: 25px 0px 0px 0px;
+    border-radius: 22px 0px 0px 0px;
     border:none;
     background-color:${background};
     padding: 5pt 15pt 5pt 15pt;
@@ -103,7 +103,7 @@ export function ResourceMenu(){
     margin-bottom: 45px;
     `
     const rightbutton = {
-    borderRadius:"0px 25px 0px 0px",
+    borderRadius:"0px 22px 0px 0px",
     backgroundColor:"#D28A7C"
     }
     
@@ -129,15 +129,15 @@ export function ResourceMenu(){
             <ResourceOutline>
 
                 <ToggleButton 
-                onClick={ () => { setFav("number"); ;} } style= {fav === "number" ? {backgroundColor: "#8E6057", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C"}}>
-                    <FontAwesomeIcon icon={faPhone} size="1x" color= {fav === "number" ? "#D28A7C" :  "#8E6057"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
+                onClick={ () => { setFav("number"); ;} } style= {fav === "number" ? {backgroundColor: "#6F5F5E", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C"}}>
+                    <FontAwesomeIcon icon={faPhone} size="1x" color= {fav === "number" ? "#D28A7C" :  "#6F5F5E"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                     NUMBERS 
                 </ToggleButton>
                 
                 <ToggleButton
                 style= {rightbutton}
-                onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#8E6057",   borderRadius:"0px 25px 0px 0px", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C",   borderRadius:"0px 25px 0px 0px",}}>
-                    <FontAwesomeIcon icon={faLink} size="1x" color= {fav === "link" ? "#D28A7C" :  "#8E6057"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
+                onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#6F5F5E",   borderRadius:"0px 22px 0px 0px", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C",   borderRadius:"0px 22px 0px 0px",}}>
+                    <FontAwesomeIcon icon={faLink} size="1x" color= {fav === "link" ? "#D28A7C" :  "#6F5F5E"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                      LINKS 
                 </ToggleButton>
                 <ListBox>
