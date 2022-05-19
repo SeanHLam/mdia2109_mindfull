@@ -104,8 +104,9 @@ export default function Quiz() {
           <SummCont>
             {Summary.map((o, i) =>
               <Bullet key={Summary}
+                text={Summary[i].option[optionnum[i]].txt}
                 // text={Summary[i].option[storedOptions[i]].txt}
-                text={Summary[i].option[1].txt}
+                //text={Summary[i].option[1].txt}
               >
               </Bullet>)}
           </SummCont>
@@ -122,10 +123,10 @@ export default function Quiz() {
             {Results.map((o, i) =>
 
               <Stat key={Results}
-                // point1={Results[i].choices[optionnum[i + 1]].text1}
-                // point2={Results[i].choices[optionnum[i + 1]].text2}
-                point1={Results[i].choices[1].text1}
-                point2={Results[i].choices[1].text2}
+                point1={Results[i].choices[optionnum[i + 1]].text1}
+                point2={Results[i].choices[optionnum[i + 1]].text2}
+                // point1={Results[i].choices[1].text1}
+                // point2={Results[i].choices[1].text2}
                 statIcon={Results[i].icon}
               >
               </Stat>)}

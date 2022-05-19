@@ -174,7 +174,7 @@ export const ButtLinks = [
 
     {
        path: "/resource",
-       name: "Learn more"
+       name: "Learn More"
     },
 
     {
@@ -184,12 +184,12 @@ export const ButtLinks = [
 
      {
         path: "/about",
-        name: "About the team"
+        name: "About the Team"
      },
 
      {
         path: "/home",
-        name: "Back to home"
+        name: "Back to Home"
      }
 
      

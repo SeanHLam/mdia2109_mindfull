@@ -58,7 +58,7 @@ export default function Activities() {
       </main>
 
       <Cont>
-      <ImgDiv path='/shirt.png' 
+      <ImgDiv path='/shirt.PNG' 
       size='9em' 
       placement='absolute' 
       zIndex='1' 
@@ -80,7 +80,7 @@ export default function Activities() {
       </ImgDiv>
      
       <ImgDiv 
-      path='/apple.png' 
+      path='/apple.PNG' 
       size='6em' 
       placement='absolute' 
       zIndex='1' marginLeft='1em' 
@@ -102,7 +102,7 @@ export default function Activities() {
       </ImgDiv>
      
       <ImgDiv 
-      path='/book.png' 
+      path='/book.PNG' 
       size='9em' 
       placement='absolute' 
       zIndex='1' 
@@ -123,7 +123,7 @@ export default function Activities() {
       </ImgDiv>
       
       <ImgDiv 
-      path='/activityRoom.png' 
+      path='/activityRoom.PNG' 
       size='32em'>
       
       </ImgDiv>
