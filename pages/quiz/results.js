@@ -85,7 +85,7 @@ export default function Quiz() {
           <HeadText text={`Your mindfulness score: ${mindScore} / 5`} color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
           <ImgDiv path={Resimg[mindScore - 1]} padding="0" > </ImgDiv>
           <ScaleCont>
-            {scale.map((o, i) => <MindScale key={scaleNum}
+            {scale.map((o, i) => <MindScale key={scale}
               scaleNum={i + 1}
               backgroundColor={mindScore === i + 1 ? '#D28A7C' : "#8EAAAC"}
 
