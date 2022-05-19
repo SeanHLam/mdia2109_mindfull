@@ -95,7 +95,9 @@ export function ResourceMenu(){
     border-color: black;
     font-size:16pt;
     width: 115pt;
-    border-radius: 22px 0px 0px 0px;
+
+    border-radius: 21px 0px 0px 0px;
+
     border:none;
     background-color:${background};
     padding: 5pt 15pt 5pt 15pt;
@@ -103,7 +105,9 @@ export function ResourceMenu(){
     margin-bottom: 45px;
     `
     const rightbutton = {
-    borderRadius:"0px 22px 0px 0px",
+
+    borderRadius:"0px 21px 0px 0px",
+
     backgroundColor:"#D28A7C"
     }
     
@@ -136,7 +140,9 @@ export function ResourceMenu(){
                 
                 <ToggleButton
                 style= {rightbutton}
-                onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#6F5F5E",   borderRadius:"0px 22px 0px 0px", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C",   borderRadius:"0px 22px 0px 0px",}}>
+
+                onClick={ () => {setFav("link");} } style= {fav === "link" ? {backgroundColor: "#6F5F5E",   borderRadius:"0px 21px 0px 0px", boxShadow:"inset 0 0 4px black"} : {backgroundColor: "#D28A7C",   borderRadius:"0px 21px 0px 0px",}}>
+
                     <FontAwesomeIcon icon={faLink} size="1x" color= {fav === "link" ? "#D28A7C" :  "#6F5F5E"} style={{marginRight: "5px"}}> </FontAwesomeIcon> 
                      LINKS 
                 </ToggleButton>
