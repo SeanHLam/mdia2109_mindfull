@@ -50,25 +50,18 @@ export default function WaterActivity() {
                 <ImgDiv path={water[wnum].img} size="20em" onClick={() => r.push({
                     pathname: "/activities/drinkwater",
                     query: {
-                        wnum: (Number(wnum) + 1 >= water.img) ? water.img - 1 : Number(wnum) + 1
+                        // wnum: (Number(wnum) + 1 >= water.img) ? water.img - 1 : Number(wnum) + 1
+                        wnum: (Number(wnum) < 3) ? Number(wnum) + 1 : Number(wnum) 
+                     
                     }
                 })}></ImgDiv>
 
                 <ParaText text="Tap the glass to drink water"></ParaText>
+                <LargeButton button_text="Take me back" next="/activities"></LargeButton>
 
                 
 
-                {/* <ImgDiv path='/glass1.gif' size='15em'></ImgDiv> */}
-
-                {/* {Number(wnum) < 4 &&
-                    // <SmallButton button_text = "Drink" onClick={() => r.push({
-                    //     pathname: "/activities/drinkwater",
-                    //     query: {
-                    //         wnum: (Number(wnum) + 1 >= water.img) ? water.img - 1 : Number(wnum) + 1
-                    //     }
-                    // })}>
-                    // </SmallButton>
-                } */}
+       
 
             </Cont>
 

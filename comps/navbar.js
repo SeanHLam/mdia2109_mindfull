@@ -146,12 +146,80 @@ return <NavCont>
 
     <NavBot style= {toggle ? {maxHeight: "400px"} : {height: "0%",}}>
         <NavUl>
+            <NavLi
+               onClick={()=> r.push({
+                pathname: NavPath[0]
+                })}>
+                
+            <IconCont>
+                <FontAwesomeIcon icon={NavIcon[0]} color="white"></FontAwesomeIcon>
+            </IconCont>
+            {NavName[0]}
+            </NavLi>
+
+            <NavLi
+               onClick={()=> r.push({
+                pathname: NavPath[1]
+                })}>
+                
+            <IconCont>
+                <FontAwesomeIcon icon={NavIcon[1]} color="white"></FontAwesomeIcon>
+            </IconCont>
+            {NavName[1]}
+            </NavLi>
             
-            {NavName.map((o,i)=><NavLi
+            <NavLi
+               onClick={()=> r.push({
+                pathname: NavPath[2]
+                })}>
+                
+            <IconCont>
+                <FontAwesomeIcon icon={NavIcon[2]} color="white"></FontAwesomeIcon>
+            </IconCont>
+            {NavName[2]}
+            </NavLi>
+
+            <NavLi
+               onClick={()=> r.push({
+                pathname: NavPath[3]
+                })}>
+                
+            <IconCont>
+                <FontAwesomeIcon icon={NavIcon[3]} color="white"></FontAwesomeIcon>
+            </IconCont>
+            {NavName[3]}
+            </NavLi>
+            
+            <NavLi
+               onClick={()=> r.push({
+                pathname: NavPath[4]
+                })}>
+                
+            <IconCont>
+                <FontAwesomeIcon icon={NavIcon[4]} color="white"></FontAwesomeIcon>
+            </IconCont>
+            {NavName[4]}
+            </NavLi>
+
+            <NavLi
+               onClick={()=> r.push({
+                pathname: NavPath[5]
+                })}>
+                
+            <IconCont>
+                <FontAwesomeIcon icon={NavIcon[5]} color="white"></FontAwesomeIcon>
+            </IconCont>
+            {NavName[5]}
+            </NavLi>
+            
+            
+            
+            
+            {/* {NavName.map((o,i)=><NavLi
                  onClick={()=> r.push({
                  pathname: NavPath[i]
                  })}
-                //  style= {toggle ? {opacity: "100", height: "100%"} : { opacity: "0", height: "0"}}
+                
                 >
                 <IconCont>
                     <FontAwesomeIcon icon={NavIcon[i]} color="white"></FontAwesomeIcon>
@@ -160,7 +228,7 @@ return <NavCont>
                 
                 
                 }</NavLi>)}
-            
+             */}
             
             
 

@@ -24,10 +24,6 @@ z-index: auto;
 `
 
 export default function Activities() {
-
-
- 
-  
   return (
     <div>
       <Head>
@@ -42,6 +38,7 @@ export default function Activities() {
 
       <Cont>
       <BreatheCircle></BreatheCircle>
+      <LargeButton button_text="Take me back" next="/activities"></LargeButton>
       </Cont>
     
       

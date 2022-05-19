@@ -25,6 +25,6 @@ export const NavPath = [
     "/resource",
     '/activities',
     "/about",
-    "/infograph",
+    "https://lamzone.ca/infographic",
 ]
 
