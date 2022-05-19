@@ -56,12 +56,12 @@ margin: 1em;
 const ResultCont = styled.div`
 width: 20rem;
 height:fit-content;
-border: solid 3px #8EAAAC; 
+border: solid 10px #8EAAAC; 
 border-radius: 8pt;
 `
 
 const SummCont = styled.ul`
-border: solid 3px #8EAAAC; 
+border: solid 10px #8EAAAC; 
 border-radius: 8pt;
 `
 

@@ -16,12 +16,24 @@ import { Message } from '../../comps/messagebrowny';
 import { message, speech, CleanUp  } from '../../data/activitydata';
 
 const Cont = styled.div`
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+`
+
+const Act = styled.div`
 margin-top: 2em;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 z-index: auto;
+width:25em;
+border: solid 10px #8EAAAC; 
+border-radius: 8pt;
 `
 
 const Cont2 = styled.div`
@@ -49,19 +61,25 @@ export default function Activities() {
       <main>
       <NavBar></NavBar>
       </main>
-
       <Cont>
-      <HeadText text="Activity 1"></HeadText>
-      <ImgDiv path='/broom2.gif' size='15em'></ImgDiv>
-      <LargeButton button_text="Cleaning your room" next="/activities/cleanup"></LargeButton>
-      </Cont>
+        <Act>
+        <HeadText text="Cleaning Your Room"></HeadText>
+        <ImgDiv path='/broom2.gif' size='15em'></ImgDiv>
+        <LargeButton button_text="Start Activity" next="/activities/cleanup"></LargeButton>
+        </Act>
 
-      <Cont2>
-      <HeadText text="Activity 2"></HeadText>
-      <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
-      <LargeButton button_text="Staying hydrated" next="/activities/drinkwater"></LargeButton>
-      </Cont2>
-    
+        <Act>
+        <HeadText text="Staying Hydrated"></HeadText>
+        <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
+        <LargeButton button_text="Start Activity" next="/activities/drinkwater"></LargeButton>
+        </Act>
+
+        <Act>
+        <HeadText text="Calming Breathing Exercise"></HeadText>
+        <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
+        <LargeButton button_text="Start Activity" next="/activities/breathing"></LargeButton>
+        </Act>
+      </Cont>
       
     </div>
   )

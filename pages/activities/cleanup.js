@@ -30,7 +30,19 @@ export default function Activities() {
   var {apple} = r.query;
   var {book} = r.query;
 
+  function HandleShirt(){
 
+    StoreAn(qnum, o.num, o.txt, Number(i)),
+
+      r.push({
+        pathname: "/quiz/questions",
+        query: {
+          qnum: Number(qnum),
+          click: Number(i)
+        }
+      }, null, { scroll: false })
+
+  }
  
   
   return (
@@ -53,7 +65,6 @@ export default function Activities() {
       marginLeft='-6em' 
       top='25em'
       onClick={() => 
-        
         r.push({
           pathname: "/activities/cleanup",
           query: {
@@ -114,10 +125,14 @@ export default function Activities() {
       <ImgDiv 
       path='/activityRoom.png' 
       size='32em'>
+      
       </ImgDiv>
       
 
-
+      {
+          Number(num) === 4 &&
+          <LargeButton button_text="Take me back" next="/activities"></LargeButton>
+        }
 
       <Message onClick={() => r.push({
         pathname: "/activities/cleanup",
@@ -130,10 +145,7 @@ export default function Activities() {
 
       }, null, {scroll:false})} path={speech[num]}></Message>
       
-      {
-          Number(num) === 4 &&
-          <LargeButton button_text="Take me back home"></LargeButton>
-        }
+  
       
       </Cont>
     
