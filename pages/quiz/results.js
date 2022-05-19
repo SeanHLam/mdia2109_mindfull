@@ -85,7 +85,7 @@ export default function Quiz() {
           <HeadText text={`Your mindfulness score: ${mindScore} / 5`} color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
           <ImgDiv path={Resimg[mindScore - 1]} padding="0" > </ImgDiv>
           <ScaleCont>
-            {scale.map((o, i) => <MindScale
+            {scale.map((o, i) => <MindScale key={scaleNum}
               scaleNum={i + 1}
               backgroundColor={mindScore === i + 1 ? '#D28A7C' : "#8EAAAC"}
 
@@ -96,7 +96,7 @@ export default function Quiz() {
           <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
           <SummCont>
             {Summary.map((o, i) =>
-              <Bullet
+              <Bullet key={Summary}
                 text={Summary[i].option[storedOptions[i]].txt}
               >
               </Bullet>)}
@@ -109,7 +109,7 @@ export default function Quiz() {
           <ResultCont>
             {Results.map((o, i) =>
 
-              <Stat
+              <Stat key={results}
                 point1={Results[i].choices[optionnum[i + 1]].text1}
                 point2={Results[i].choices[optionnum[i + 1]].text2}
                 statIcon={Results[i].icon}
@@ -121,7 +121,7 @@ export default function Quiz() {
 
           <ImgDiv path='/related.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
           {ButtLinks.map((o, i) =>
-            <LargeButton
+            <LargeButton key={ButtLinks}
               button_text={ButtLinks[i].name}
               next={ButtLinks[i].path}
             >
