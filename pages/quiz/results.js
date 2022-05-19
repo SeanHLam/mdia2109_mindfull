@@ -23,12 +23,12 @@ import { Stat } from '../../comps/stat';
 //   if(optionnum.length===5){
 //     localStorage.setItem("options", JSON.stringify(optionnum))
 //   }   
-  
+
 //   var storedOptions = JSON.parse(localStorage.getItem("options"))
 // }
 
-if (typeof window !== 'undefined'){
-  var storedOptions = JSON.parse(localStorage.getItem("options")|| [])
+if (typeof window !== 'undefined') {
+  var storedOptions = JSON.parse(localStorage.getItem("options") || [])
 }
 
 console.log(storedOptions)
@@ -68,6 +68,7 @@ border-radius: 8pt;
 
 export default function Quiz() {
   const scale = [0, 1, 1, 2, 3];
+  
   return (
     <div>
       <Head>
@@ -91,27 +92,40 @@ export default function Quiz() {
 
             > </MindScale>)}
           </ScaleCont>
-          <ImgDiv path='/scaleArrow.png' size='28rem' marginLeft="0" marginRight="0" padding="0" marginBottom-="-1em" ></ImgDiv>
+          <ImgDiv
+            path='/scaleArrow.png' size='28rem' marginLeft="0"
+            marginRight="0" padding="0" marginBottom-="-1em" >
+          </ImgDiv>
 
-          <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+          <ImgDiv path='/singleCloud.png' size='25rem'
+            placement='static' opacity='100%'
+            top='5rem' marginLeft='1rem' marginRight='1rem'>
+          </ImgDiv>
           <SummCont>
             {Summary.map((o, i) =>
               <Bullet key={Summary}
-                text={Summary[i].option[storedOptions[i]].txt}
+                // text={Summary[i].option[storedOptions[i]].txt}
+                text={Summary[i].option[1].txt}
               >
               </Bullet>)}
           </SummCont>
 
           <Arrow></Arrow>
-          <ImgDiv path='/brownyAdvice.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+          <ImgDiv 
+            path='/brownyAdvice.png' size='25rem'
+            placement='static' opacity='100%' top='5rem'
+            marginLeft='1rem' marginRight='1rem'>
+          </ImgDiv>
 
 
           <ResultCont>
             {Results.map((o, i) =>
 
-              <Stat key={results}
-                point1={Results[i].choices[optionnum[i + 1]].text1}
-                point2={Results[i].choices[optionnum[i + 1]].text2}
+              <Stat key={Results}
+                // point1={Results[i].choices[optionnum[i + 1]].text1}
+                // point2={Results[i].choices[optionnum[i + 1]].text2}
+                point1={Results[i].choices[1].text1}
+                point2={Results[i].choices[1].text2}
                 statIcon={Results[i].icon}
               >
               </Stat>)}
@@ -119,7 +133,10 @@ export default function Quiz() {
           <ImgDiv path='/browny.gif' size='25 rem' padding="0"></ImgDiv>
 
 
-          <ImgDiv path='/related.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+          <ImgDiv path='/related.png' size='25rem' placement='static'
+            opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'>
+
+          </ImgDiv>
           {ButtLinks.map((o, i) =>
             <LargeButton key={ButtLinks}
               button_text={ButtLinks[i].name}
