@@ -32,6 +32,20 @@ export default function Instruction() {
     snum = 0;
   }
 
+  function HandleKey(){
+
+    localStorage.clear();
+
+    r.push({
+      pathname: "/quiz/questions",
+
+    }, null, {scroll:false})
+
+  }
+
+
+  
+
   return (
     <div>
       <Head>
@@ -86,10 +100,10 @@ export default function Instruction() {
           }
 
           {Number(snum) === 3 &&
-            <SmallButton button_text="Let's start" onClick={() => r.push({
-              pathname: "/quiz/questions",
-
-            }, null, {scroll:false})}>
+            <SmallButton button_text="Let's start" onClick={() =>
+            
+            HandleKey()
+            }>
             </SmallButton>
           }
 

@@ -55,6 +55,15 @@ export default function Quiz() {
 
   }
 
+  function HandleKey(){
+
+    r.push({
+      pathname: "/quiz/results"
+
+    }, addMind())
+
+  }
+
 
   return (
     <div>
@@ -66,7 +75,7 @@ export default function Quiz() {
       <NavBar></NavBar>
       <Cont>
         <QuizCont>
-          {scale.map((o, i) => <MindScale key={scale}
+          {scale.map((o, i) => <MindScale key={scale[i]}
             scaleNum={i + 1}
             // backgroundColor={Number(qnum) === i ? '#D28A7C' : "rgba(0,0,0,0)"}
             backgroundColor={Number(qnum) === i ? '#D28A7C' : "rgba(0,0,0,0)" } 
@@ -93,7 +102,7 @@ export default function Quiz() {
           Number(qnum) < 4 &&
 
           ques[qnum].c.map((o, i) => (
-            <QueButton key={ques.length}
+            <QueButton key={ques[i]}
 
               button_text={o.txt}
               onClick={() =>
@@ -112,7 +121,7 @@ export default function Quiz() {
           {
             Number(qnum) === 4 &&
             ques[qnum].c.map((o, i) =>
-              <ImgQue key={ques.que}
+              <ImgQue key={ques[i]}
               size="100pt" path={Number(click) === i ? ques[qnum].c[i].sel : ques[qnum].c[i].ig}
                 onClick={() => HandleQue(o, i)}>
               </ImgQue>)
@@ -144,10 +153,7 @@ export default function Quiz() {
           {Number(qnum) === 4 &&
             <SmallButton button_text="Finish" onClick={() =>
               options[qnum] != null &&
-              r.push({
-                pathname: "/quiz/results"
-
-              }, addMind())}>
+              HandleKey()}>
             </SmallButton>
           }
 
