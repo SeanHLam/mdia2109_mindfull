@@ -148,7 +148,7 @@ return <NavCont>
         <NavUl>
           
             
-            {NavName.map((o,i)=><NavLi key={NavName}
+            {NavName.map((o,i)=><NavLi key={NavName[i]}
                  onClick={()=> r.push({
                  pathname: NavPath[i]
                  })}

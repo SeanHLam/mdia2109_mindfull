@@ -55,18 +55,18 @@ export function Stat({
     statIcon = { faPersonWalking }
 
 }) {
-    return <StatCont>
+    return <StatCont suppressHydrationWarning >
         <IconCont>
             <FontAwesomeIcon icon={statIcon} size="2xl" color="#D28A7C"></FontAwesomeIcon>
         </IconCont>
 
         <StatList>
-            <AdviceCont>
-                <ListItem>{point1}</ListItem>
+            <AdviceCont suppressHydrationWarning >
+                <ListItem suppressHydrationWarning >{point1}</ListItem>
             </AdviceCont>
 
-            <AdviceCont>
-                <ListItem>{point2}</ListItem>
+            <AdviceCont >
+                <ListItem suppressHydrationWarning >{point2}</ListItem>
             </AdviceCont>
         </StatList>
 

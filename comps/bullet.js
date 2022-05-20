@@ -22,7 +22,7 @@ export function Bullet
         
 
     }) {
-    return <LiItem
+    return <LiItem suppressHydrationWarning="true" 
         
         style={{ color: color, position: placement, marginRight: marginRight, marginLeft: marginLeft, marginTop: marginTop, marginBottom: marginBottom }}
     >{text}</LiItem>
