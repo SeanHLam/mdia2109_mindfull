@@ -32,7 +32,7 @@ export const Summary = [
          },
 
          {
-            txt: "You don't exercise too much"
+            txt: "You don't exercise often"
          },
       ]
    },
@@ -56,11 +56,11 @@ export const Summary = [
    {
       option:[
          {
-          txt: "You're getting enough sleep ever day"
+          txt: "You're getting enough sleep every day"
          },
 
          {
-            txt: "You're not sleeping enough"
+            txt: "You're not sleeping a healthy amount"
          },
       ]
    },
@@ -68,23 +68,23 @@ export const Summary = [
    {
       option:[
          {
-          txt: "You feel great!"
+          txt: "You're feeling great!"
          },
 
          {
-            txt: "You are feeling happy!"
+            txt: "You're feeling happy!"
          },
 
          {
-            txt: "You are doing okay"
+            txt: "You're feeling okay"
          },
 
          {
-            txt: "You are feeling sad"
+            txt: "You're feeling sad"
          },
 
          {
-            txt: "You are not feeling good"
+            txt: "You're not feeling that great today"
          },
       ]
    },
@@ -95,32 +95,32 @@ export const Results = [
    {icon: faBasketball,
       choices:[
          {
-            text1: `You are doing very well. Keep it going!`,
-            text2:`Exercising is a key part of staying healthy physically and mentally.`
+            text1: `Exercising is a key part of staying healthy, physically and mentally!`,
+            text2:`Try thinking of new ways to stay active to keep you engaged.`
          },
 
          {
-            text1: `It's always good to try and exercise more`,
-            text2:`If you don't have a lot of time, start small with short walks every day`
+            text1: `It's always good to try and exercise more!`,
+            text2:`If you don't have a lot of time, start small with short walks every day.`
          },
       ] },
 
       {icon: faHamburger,
          choices:[
             {
-               text1: `Overeating can be a symptom of stress`,
-               text2:`Try and be more mindful about what and when you're eating`
+               text1: `Overeating can be a symptom of being over stressed.`,
+               text2:`Try and be more mindful about what and how often you're eating.`
             },
    
             {
                text1: `It's great that you're eating well!
                `,
-               text2:`Remember to also take nutrition into consideration when eating.`
+               text2:`Remember to also take nutrition info into consideration when eating.`
             },
 
             {
-               text1: `Undereating can lead to a lot of different health issues`,
-               text2:`Try to set some reminders to let yourself eat`
+               text1: `Undereating can lead to a lot of health issues.`,
+               text2:`Try to set some reminders to let yourself eat.`
             },
 
          ] },
@@ -128,41 +128,41 @@ export const Results = [
          {icon: faMoon,
             choices:[
                {
-                  text1: `You're sleeping a healthy amount!`,
-                  text2:`Sleeping helps with processing emotional information and improving physical health.`
+                  text1: `Sleeping helps with processing emotional information and improving physical health!`,
+                  text2:`Consider the way you're sleeping to make sure you're not hurting your body.`
                },
       
                {
-                  text1: `Not getting enough sleep can be bad for your mental and physical health`,
-                  text2:`Try setting up a curfew for yourself and put all devices away in bed`
+                  text1: `Not getting enough sleep can effect for your mental and physical health.`,
+                  text2:`Try setting up a curfew for yourself and put all devices away before bed.`
                },
             ] },
 
             {icon: faSeedling,
                choices:[
                   {
-                     text1: `We're glad to see you happy!`,
-                     text2:`Staying positive will boost your mental health.`
+                     text1: `Keeping a good attitude will elavate your mantal health!`,
+                     text2:`Try and brighten up someone else's day!`
                   },
          
                   {
                      text1: `We're glad to see you happy!`,
-                     text2:`Staying positive will boost your mental health.`
+                     text2:`Keep up your positive thinking through the day!`
                   },
 
                   {
-                     text1: `We're glad to see you happy!`,
-                     text2:`Staying positive will boost your mental health.`
+                     text1: `It's common to feel neutral on some days.`,
+                     text2:`Think of something you can do to lift your mood today!`
                   },
 
                   {
-                     text1: `We're glad to see you happy!`,
-                     text2:`Staying positive will boost your mental health.`
+                     text1: `Having some sad days is completely normal!`,
+                     text2:`Make some time for yourself to start feeling better.`
                   },
 
                   {
-                     text1: `We're glad to see you happy!`,
-                     text2:`Staying positive will boost your mental health.`
+                     text1: `Negative moods can contribute to over stress and health problems.`,
+                     text2:`Try making a list of things that bring you down to help visualize your troubles!`
                   },
                ] },
 
@@ -174,7 +174,7 @@ export const ButtLinks = [
 
     {
        path: "/resource",
-       name: "Learn More"
+       name: "Resources"
     },
 
     {
