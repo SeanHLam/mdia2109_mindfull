@@ -89,7 +89,7 @@ export default function Instruction() {
 
 
 
-          {Number(snum) < 3 &&
+          {Number(snum) < 4  &&
             <SmallButton onClick={() => r.push({
               pathname: "/quiz/",
               query: {
@@ -99,7 +99,7 @@ export default function Instruction() {
             </SmallButton>
           }
 
-          {Number(snum) === 3 &&
+          {Number(snum) === 4 &&
             <SmallButton button_text="Let's start" onClick={() =>
             
             HandleKey()

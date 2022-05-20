@@ -6,7 +6,7 @@ export const ques = [
         q: "How old are you?",
         c: [
             {
-                txt: "15 - 18 years old",
+                txt: "13 - 18 years old",
                 num: 0,
             },
 
@@ -44,17 +44,17 @@ export const ques = [
         q: "How much are you eating in a day?",
         c: [
             {
-                txt: "I eat too much",
+                txt: "I feel like I eat too much",
                 num: -1,
             },
 
             {
-                txt: "I’m eating enough",
+                txt: "I feel like I’m eating enough",
                 num: 1,
             },
 
             {
-                txt: "I don’t eat enough",
+                txt: "I feel like I don’t eat enough",
                 num: -1,
             }
         ],

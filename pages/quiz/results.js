@@ -133,7 +133,7 @@ export default function Quiz() {
               </Bullet>)}
           </SummCont>
 
-          <Arrow></Arrow>
+          <Divider></Divider>
           <ImgDiv
             path='/brownyAdvice.png' size='25rem'
             placement='static' opacity='100%' top='5rem'
