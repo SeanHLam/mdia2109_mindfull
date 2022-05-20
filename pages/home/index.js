@@ -35,6 +35,12 @@ animation-delay: 1.5s;
 margin-right:25px;
 `
 
+const ThirdAnimation = styled.div`
+opacity:0%;
+animation: fadeUp 1s ease-in-out forwards;
+animation-delay: 1.75s;
+`
+
 export default function Home() {
   return (
     <div>
@@ -65,6 +71,11 @@ export default function Home() {
       <ParaText text="And why is it important?" textAlign="right" fontSize="12pt" marginTop='-3px' ></ParaText>
       <ParaText text="It's a basic human ability to be fully present, aware of where we are. When we're mindful, we reduce stress, enhance overall performance and suspend judgment." fontSize="14pt"textAlign="right" width="300px" marginTop="15px"></ParaText>
       </SecondAnimation>
+
+      <ThirdAnimation>
+        <ImgDiv path='/brownyMeditate.png' size='12em' marginBottom="-30px" placement="absolute" left="-200px" top='-50px'></ImgDiv>
+      </ThirdAnimation>
+
       
       </Cont>
     
