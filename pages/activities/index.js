@@ -76,7 +76,7 @@ export default function Activities() {
 
         <Act>
         <HeadText text="Calming Breathing Exercise"></HeadText>
-        <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
+        <ImgDiv path='/wind.gif' size='12em'></ImgDiv>
         <LargeButton button_text="Start Activity" next="/activities/breathing"></LargeButton>
         </Act>
       </Cont>
