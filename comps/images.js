@@ -22,6 +22,7 @@ display: block;
 z-index: auto;
 top: auto;
 left:auto;
+transition: opacity .5s;
 `
 
 
@@ -38,10 +39,6 @@ const ImageQue = styled.img`
 
 export function ImgDiv({ 
 
-
-
-
-    
 onClick=()=>{},
 path="/browny2.svg", 
 size="20em", 
@@ -75,10 +72,6 @@ onClick={onClick}
 }
 
 export function ImgQue({ 
-
-
-
-
     
     onClick=()=>{},
     path="/browny2.svg", 

@@ -137,7 +137,7 @@ return <NavCont>
             })}
         ></LogoImage>
         
-        <LogoType src="/LogoType.svg"
+        <LogoType src="/logoType.svg"
             onClick={()=>r.push({
             pathname: "/"
             })}
@@ -146,12 +146,13 @@ return <NavCont>
 
     <NavBot style= {toggle ? {maxHeight: "400px"} : {height: "0%",}}>
         <NavUl>
+          
             
-            {NavName.map((o,i)=><NavLi
+            {NavName.map((o,i)=><NavLi key={NavName}
                  onClick={()=> r.push({
                  pathname: NavPath[i]
                  })}
-                //  style= {toggle ? {opacity: "100", height: "100%"} : { opacity: "0", height: "0"}}
+                
                 >
                 <IconCont>
                     <FontAwesomeIcon icon={NavIcon[i]} color="white"></FontAwesomeIcon>

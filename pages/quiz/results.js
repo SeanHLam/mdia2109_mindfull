@@ -15,8 +15,23 @@ import { MindScale } from "../../comps/mindscale";
 import { ImgDiv } from '../../comps/images';
 import { Arrow } from '../../comps/arrow';
 import { Bullet } from '../../comps/bullet';
-import { ButtLinks, Results, Summary } from '../../data/resultsdata';
+import { ButtLinks, Results, Summary, Resimg } from '../../data/resultsdata';
 import { Stat } from '../../comps/stat';
+
+
+// if (typeof window !== 'undefined'){
+//   if(optionnum.length===5){
+//     localStorage.setItem("options", JSON.stringify(optionnum))
+//   }   
+
+//   var storedOptions = JSON.parse(localStorage.getItem("options"))
+// }
+
+if (typeof window !== 'undefined') {
+  var storedOptions = JSON.parse(localStorage.getItem("options") || [])
+}
+
+console.log(storedOptions)
 
 const Cont = styled.div`
 display: flex;
@@ -41,18 +56,19 @@ margin: 1em;
 const ResultCont = styled.div`
 width: 20rem;
 height:fit-content;
-border: solid 3px #8EAAAC; 
+border: solid 10px #8EAAAC; 
 border-radius: 8pt;
 `
 
 const SummCont = styled.ul`
-border: solid 3px #8EAAAC; 
+border: solid 10px #8EAAAC; 
 border-radius: 8pt;
 `
 
 
 export default function Quiz() {
   const scale = [0, 1, 1, 2, 3];
+  
   return (
     <div>
       <Head>
@@ -64,82 +80,73 @@ export default function Quiz() {
       <main>
 
         <NavBar></NavBar>
-
-
-
         <Cont>
+          <Divider />
 
           <HeadText text={`Your mindfulness score: ${mindScore} / 5`} color="#6F5F5E" marginTop="1rem" fontSize="28pt"></HeadText>
+          <ImgDiv path={Resimg[mindScore - 1]} padding="0" > </ImgDiv>
           <ScaleCont>
-            {scale.map((o, i) => <MindScale
+            {scale.map((o, i) => <MindScale key={scale}
               scaleNum={i + 1}
               backgroundColor={mindScore === i + 1 ? '#D28A7C' : "#8EAAAC"}
-              m
+
             > </MindScale>)}
           </ScaleCont>
+          <ImgDiv
+            path='/scaleArrow.png' size='28rem' marginLeft="0"
+            marginRight="0" padding="0" marginBottom-="-1em" >
+          </ImgDiv>
 
-          <ImgDiv path='/scaleArrow.png' size='28rem' marginLeft="0" marginRight="0" padding="0" marginBottom-="-1em" ></ImgDiv>
-
-
-
-
-
-
-
-
-
-
-          <ImgDiv path='/singleCloud.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
-
-
-
+          <ImgDiv path='/singleCloud.png' size='25rem'
+            placement='static' opacity='100%'
+            top='5rem' marginLeft='1rem' marginRight='1rem'>
+          </ImgDiv>
           <SummCont>
             {Summary.map((o, i) =>
-
-              <Bullet
+              <Bullet key={Summary}
                 text={Summary[i].option[optionnum[i]].txt}
+                // text={Summary[i].option[storedOptions[i]].txt}
+                //text={Summary[i].option[1].txt}
               >
               </Bullet>)}
           </SummCont>
 
-
-
-
           <Arrow></Arrow>
-
-          <ImgDiv path='/brownyAdvice.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+          <ImgDiv 
+            path='/brownyAdvice.png' size='25rem'
+            placement='static' opacity='100%' top='5rem'
+            marginLeft='1rem' marginRight='1rem'>
+          </ImgDiv>
 
 
           <ResultCont>
             {Results.map((o, i) =>
 
-              <Stat
+              <Stat key={Results}
                 point1={Results[i].choices[optionnum[i + 1]].text1}
                 point2={Results[i].choices[optionnum[i + 1]].text2}
+                // point1={Results[i].choices[1].text1}
+                // point2={Results[i].choices[1].text2}
                 statIcon={Results[i].icon}
               >
               </Stat>)}
           </ResultCont>
+          <ImgDiv path='/browny.gif' size='25 rem' padding="0"></ImgDiv>
 
-          <Divider></Divider>
-          <Divider></Divider>
 
-          <ImgDiv path='/related.png' size='25rem' placement='static' opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'></ImgDiv>
+          <ImgDiv path='/related.png' size='25rem' placement='static'
+            opacity='100%' top='5rem' marginLeft='1rem' marginRight='1rem'>
+
+          </ImgDiv>
           {ButtLinks.map((o, i) =>
-            <LargeButton
+            <LargeButton key={ButtLinks}
               button_text={ButtLinks[i].name}
               next={ButtLinks[i].path}
             >
             </LargeButton>)}
 
         </Cont>
-
-        {/* <ImgDiv path='/brownyexplain.svg' size='10rem' padding='1pt' placement="absolute"></ImgDiv> */}
-
-
       </main>
-
-
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import { HeadText } from "../../comps/header";
 import {ParaText} from "../../comps/body"
 import styled from 'styled-components';
@@ -14,30 +13,9 @@ import { untidyImgs } from '../../data/sampledata';
 import { ImgDiv, returnClick } from '../../comps/images';
 import { Message } from '../../comps/messagebrowny';
 import { message, speech, CleanUp  } from '../../data/activitydata';
+import { BreatheCircle } from '../../comps/breathecircle';
 
 const Cont = styled.div`
-
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-
-`
-
-const Act = styled.div`
-margin-top: 2em;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-z-index: auto;
-width:25em;
-border: solid 10px #8EAAAC; 
-border-radius: 8pt;
-`
-
-const Cont2 = styled.div`
-margin-top: 4em;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -46,10 +24,6 @@ z-index: auto;
 `
 
 export default function Activities() {
-
-
- 
-  
   return (
     <div>
       <Head>
@@ -61,25 +35,12 @@ export default function Activities() {
       <main>
       <NavBar></NavBar>
       </main>
+
       <Cont>
-        <Act>
-        <HeadText text="Cleaning Your Room"></HeadText>
-        <ImgDiv path='/broom2.gif' size='15em'></ImgDiv>
-        <LargeButton button_text="Start Activity" next="/activities/cleanup"></LargeButton>
-        </Act>
-
-        <Act>
-        <HeadText text="Staying Hydrated"></HeadText>
-        <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
-        <LargeButton button_text="Start Activity" next="/activities/drinkwater"></LargeButton>
-        </Act>
-
-        <Act>
-        <HeadText text="Calming Breathing Exercise"></HeadText>
-        <ImgDiv path='/glass1.gif' size='12em'></ImgDiv>
-        <LargeButton button_text="Start Activity" next="/activities/breathing"></LargeButton>
-        </Act>
+      <BreatheCircle></BreatheCircle>
+      <LargeButton button_text="Take me back" next="/activities"></LargeButton>
       </Cont>
+    
       
     </div>
   )
