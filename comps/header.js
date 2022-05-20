@@ -13,10 +13,13 @@ export function HeadText({ text = "text sample", color = "#6F5F5E",
 	placement = "static",
 	marginTop = 'auto',
 	fontSize = '38pt',
+	textAlign = "center",
+	width="auto",
+	lineHeight="auto",
 
 }) {
 	return <TextItem src={text}
-		style={{ color: color, position: placement, marginTop: marginTop, fontSize: fontSize }}
+		style={{ lineHeight:lineHeight,width: width,textAlign: textAlign,color: color, position: placement, marginTop: marginTop, fontSize: fontSize }}
 	>{text}</TextItem>
 }
 

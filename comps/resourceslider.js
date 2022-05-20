@@ -62,12 +62,13 @@ export const ResourceSlider = ({slides}) => {
                 size='4.5em'
                 left='-15pt'
                 onClick = {prevImage}
+                display = {current === 0 ? "none" : "flex"}
                 >
                 </ImgDiv>
                 <ImgDiv 
                 path ='/right-arrow.png'
                 size='4.5em'
-                left='165pt'
+                left= { current === 0 ? "219pt" : "165pt"} 
                 onClick = {nextImage}
                 display = {current === 3 ? "none" : "flex"}
                 >

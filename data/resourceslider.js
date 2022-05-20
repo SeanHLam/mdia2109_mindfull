@@ -15,17 +15,16 @@ export const MessageData = [
 
 export const ImageData = [
 {
-    image:'https://cdn-icons-png.flaticon.com/512/2405/2405308.png',
+    image:'/img1.png',
 },
 {
-    image:'https://cdn-icons-png.flaticon.com/512/3208/3208264.png'
+    image:'/img2.png',
 },
 {
-    image:'https://cdn-icons-png.flaticon.com/512/3310/3310192.png'
+    image:'/img3.png',
 },
 {
-    image:'https://cdn-icons-png.flaticon.com/512/3782/3782141.png'
-}
-];
+    image:'/img4.png',
+}];
 
 
